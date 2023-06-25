@@ -1,0 +1,134 @@
+* 
+{
+  font-family: "Roboto", sans-serif;
+  /*the font family can be changed in this line (currently using "Geneva")*/
+  padding: 0;
+  margin: 0;
+}
+
+body
+/*default grandient color if the video can't be loaded*/
+{
+  background: linear-gradient(to right bottom, #9ADFF5, #A17AFF);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@keyframes slideInTop
+{
+  0% 
+  {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% 
+  {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header
+{
+  animation: slideInTop ease-out 1.5s;
+  animation-delay: 0;
+}
+
+#side_navbar, #hamburger
+{
+  display: none;
+}
+
+#navbar
+{
+  position: sticky;
+  background: linear-gradient(to bottom,rgba(255, 255, 255, 0.65) 92%,rgb(255, 255, 255, 0.3) 92% 100%);
+}
+
+#profile
+{
+  margin-left: auto;
+  margin-right: 5vmin;
+}
+
+img
+{
+  height: 6vh;
+}
+
+ul
+{
+  display: flex;
+  align-items: center;
+  height: 15vh;
+}
+
+li
+{
+  display: inline;
+  margin-left: 5vmin;
+}
+
+a
+{
+  color: #6882FF;
+  text-decoration: none;
+  font-weight: 1000;
+  font-size: 2.5vh;
+}
+
+/*Smartphone*/
+@media screen and (max-width: 875px)
+{
+  /*:not('className') makes it so that the tag with that class is not affected by this styling*/
+  li:not(#profile, #hamburger, .side_link)
+  {
+    display: none;
+  }
+
+  #side_navbar ul, #side_navbar li
+  {
+    display: block;
+    margin-left: 4vw;
+  }
+
+  #side_navbar li:not(.close_button)
+  {
+    margin-top: 2vh;
+  }
+
+  .close_button
+  {
+    margin-top: 4vh;
+    margin-bottom: 20vh;
+  }
+
+  #side_navbar
+  {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 75vw;
+    background: #E7EEF8;
+    transform: translateX(-100%);
+  }
+
+  #hamburger
+  {
+    display: block;
+  }
+
+  #hamburger:hover
+  {
+    cursor: pointer;
+  }
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px)
+{
+  
+}
