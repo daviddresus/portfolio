@@ -111,17 +111,22 @@ a
     left: 0;
     top: 0;
     height: 100%;
-    width: 75vw;
+    width: 60vw;
     background: #E7EEF8;
     transform: translateX(-100%);
   }
+
+  a
+{
+  font-size: 2.5vh;
+}
 
   #hamburger
   {
     display: block;
   }
 
-  #hamburger:hover
+  #hamburger:hover, .close_button:hover
   {
     cursor: pointer;
   }
