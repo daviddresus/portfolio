@@ -18,7 +18,7 @@ function Navbar() {
             <nav>
               <ul>
                 <li id='hamburger' onClick={openSideMenu}><img src='Images/menu.svg' alt='Hamburger Icon'/></li>
-                <li><a href='index.js'><img src='Images/logo.png' alt='Logo'/></a></li>
+                <li><a href='index.js'><img src='Images/logo.svg' alt='Logo'/></a></li>
                 <li><a href='#'>Lebenslauf</a></li>
                 <li><a href='#'>Stärken</a></li>
                 <li><a href='#'>IT-Projekte</a></li>
@@ -33,7 +33,7 @@ function Navbar() {
               <nav>
                 <ul>
                   <li className='side_link close_button' onClick={closeSideMenu}><img src='Images/close.svg' alt='Logo'/></li>
-                  <li className='side_link'><a href='#'><img src='Images/logo.png' alt='Logo'/></a></li>
+                  <li className='side_link'><a href='#'><img src='Images/logo.svg' alt='Logo'/></a></li>
                   <li className='side_link'><a href='#'>Lebenslauf</a></li>
                   <li className='side_link'><a href='#'>Stärken</a></li>
                   <li className='side_link'><a href='#'>IT-Projekte</a></li>
