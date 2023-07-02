@@ -32,7 +32,7 @@ function Navbar() {
           <div id='side_navbar'>
               <nav>
                 <ul>
-                  <li className='side_link close_button' onClick={closeSideMenu}><img src='Images/close.svg' alt='Logo'/></li>
+                  <li className='side_link' id='close_button' onClick={closeSideMenu}><img src='Images/close.svg' alt='Logo'/></li>
                   <li className='side_link'><a href='#'><img src='Images/logo.svg' alt='Logo'/></a></li>
                   <li className='side_link'><a href='#'>Lebenslauf</a></li>
                   <li className='side_link'><a href='#'>Stärken</a></li>
@@ -42,9 +42,6 @@ function Navbar() {
                 </ul>
               </nav>
           </div>
-        <body>
-          
-        </body>
     </div>
   );
 }

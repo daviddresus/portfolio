@@ -89,16 +89,16 @@ a
 
   #side_navbar ul, #side_navbar li
   {
-    display: block;
+    display: table;
     margin-left: 4vw;
   }
 
-  #side_navbar li:not(.close_button)
+  #side_navbar li:not(#close_button)
   {
     margin-top: 2vh;
   }
 
-  .close_button
+  #close_button
   {
     margin-top: 4vh;
     margin-bottom: 20vh;
@@ -126,7 +126,7 @@ a
     display: block;
   }
 
-  #hamburger:hover, .close_button:hover
+  #hamburger:hover, #close_button:hover
   {
     cursor: pointer;
   }
