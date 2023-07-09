@@ -6,6 +6,7 @@ body
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code
@@ -74,6 +75,19 @@ code
   }
 }
 
+@keyframes expand
+{
+  0% 
+  {
+    width: 0;
+  }
+
+  100% 
+  {
+    width: 70%;
+  }
+}
+
 .box
 {
   display: flex;
@@ -112,6 +126,7 @@ code
 {
   transform: scale(1.1) rotate(0deg);
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 .box_title
@@ -148,6 +163,8 @@ code
   margin-right: auto;
   margin-top: 8%;
   margin-bottom: 8%;
+  animation: expand ease-out 1.5s;
+  animation-delay: 0;
 }
 
 .box_switch
