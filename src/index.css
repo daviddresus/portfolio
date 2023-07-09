@@ -110,7 +110,7 @@ code
 
 .content_box:hover, .content_box:hover .box_title, .content_box_switch:hover, .content_box_switch:hover .box_title
 {
-  transform: scale(1.2) rotate(0deg);
+  transform: scale(1.1) rotate(0deg);
   transition-duration: 0.5s;
 }
 
