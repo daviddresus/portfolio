@@ -1,4 +1,5 @@
-body {
+body
+{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,7 +8,166 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+code
+{
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@keyframes slideInLeft
+{
+  0% 
+  {
+    transform: translatex(-150%) rotate(45deg);
+    opacity: 0;
+  }
+
+  100% 
+  {
+    transform: translateX(0) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight
+{
+  0% 
+  {
+    transform: translatex(150%);
+    opacity: 0;
+  }
+
+  100% 
+  {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeftSwitch
+{
+  0% 
+  {
+    transform: translatex(-150%);
+    opacity: 0;
+  }
+
+  100% 
+  {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRightSwitch
+{
+  0% 
+  {
+    transform: translatex(150%) rotate(45deg);
+    opacity: 0;
+  }
+
+  100% 
+  {
+    transform: translateX(0) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+.box
+{
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.content_box, .content_box_switch
+{
+  width: 20vw;
+  height: 20vw;
+  transform: rotateZ(45deg);
+  background-color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1vw solid rgba(255, 255, 255, 0.3);
+  /*makes it so that the border isn't on top of the div*/
+  background-clip: padding-box;
+  transition-duration: 0.5s;
+}
+
+.content_box
+{
+  animation: slideInLeft ease-out 1.5s;
+  animation-delay: 0;
+}
+
+.content_box_switch
+{
+  animation: slideInRightSwitch ease-out 1.5s;
+  animation-delay: 0;
+}
+
+.content_box:hover, .content_box:hover .box_title, .content_box_switch:hover, .content_box_switch:hover .box_title
+{
+  transform: scale(1.2) rotate(0deg);
+  transition-duration: 0.5s;
+}
+
+.box_title
+{
+  color: #6882FF;
+  font-size: 6vh;
+  font-weight: 600;
+  transform: rotateZ(-45deg);
+  transition-duration: 0.5s;
+}
+
+.description
+{
+  color: white;
+  font-size: 2.5vh;
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: 15%;
+  width: 27vw;
+  text-align: end;
+  opacity: 0;
+  animation: slideInRight ease-out 1.5s;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+}
+
+.line
+{
+  border-color: rgba(255, 255, 255, 0.65);
+  border-style: solid;
+  border-width: 0.15vw;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+.box_switch
+{
+  display: flex;
+  align-items: center;
+  margin-right: 15%;
+}
+
+.description_switch
+{
+  color: white;
+  font-size: 2.5vh;
+  font-weight: 600;
+  margin-right: auto;
+  margin-left: 15%;
+  width: 27vw;
+  text-align: start;
+  opacity: 0;
+  animation: slideInLeftSwitch ease-out 1.5s;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
 }
