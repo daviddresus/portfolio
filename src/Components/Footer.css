@@ -57,3 +57,21 @@ p
   font-weight: 1000;
   font-size: 2.5vh;
 }
+
+/*Smartphone*/
+@media screen and (max-width: 875px)
+{
+  p
+  {
+    font-size: 1.5vh;
+  }
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px)
+{
+  p
+  {
+    font-size: 1.5vh;
+  }
+}

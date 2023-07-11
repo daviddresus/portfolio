@@ -19,7 +19,7 @@ code
 {
   0% 
   {
-    transform: translatex(-150%) rotate(45deg);
+    transform: translatex(-200%) rotate(45deg);
     opacity: 0;
   }
 
@@ -64,7 +64,7 @@ code
 {
   0% 
   {
-    transform: translatex(150%) rotate(45deg);
+    transform: translatex(200%) rotate(45deg);
     opacity: 0;
   }
 
@@ -187,4 +187,114 @@ code
   animation: slideInLeftSwitch ease-out 1.5s;
   animation-delay: 0;
   animation-fill-mode: forwards;
+}
+
+/*Smartphone*/
+@media screen and (max-width: 875px)
+{
+  .box_title
+  {
+    font-size: 3vh;
+  }
+
+  .box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content_box
+{
+    width: 35vw;
+    height: 35vw;
+    border: 2vw solid rgba(255, 255, 255, 0.3);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8vh;
+}
+
+  .description
+  {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 8vh;
+    width: 65%;
+  }
+
+  .box_switch {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content_box_switch {
+    width: 35vw;
+    height: 35vw;
+    border: 2vw solid rgba(255, 255, 255, 0.3);
+    margin-top: 4vh;
+    order: -1;
+  }
+
+  .description_switch {
+    text-align: center;
+    margin-top: 8vh;
+    width: 65%;
+  }
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px)
+{
+  .box_title
+  {
+    font-size: 3vh;
+  }
+
+  .box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content_box
+{
+    width: 35vw;
+    height: 35vw;
+    border: 2vw solid rgba(255, 255, 255, 0.3);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8vh;
+}
+
+  .description
+  {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 8vh;
+    width: 65%;
+  }
+
+  .box_switch {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content_box_switch {
+    width: 35vw;
+    height: 35vw;
+    border: 2vw solid rgba(255, 255, 255, 0.3);
+    margin-top: 4vh;
+    order: -1;
+  }
+
+  .description_switch {
+    text-align: center;
+    margin-top: 8vh;
+    width: 65%;
+  }
 }

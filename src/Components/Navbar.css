@@ -135,12 +135,13 @@ a
     width: 60vw;
     background: #E7EEF8;
     transform: translateX(-100%);
+    z-index: 1;
   }
 
   a
-{
-  font-size: 2.5vh;
-}
+  {
+    font-size: 2.5vh;
+  }
 
   #hamburger
   {
@@ -156,5 +157,53 @@ a
 /*Tablet*/
 @media screen and (min-width: 875px) and (max-width: 1023px)
 {
-  
+  li:not(#profile, #hamburger, .side_link)
+  {
+    display: none;
+  }
+
+  #side_navbar ul, #side_navbar li
+  {
+    display: table;
+    margin-left: 4vw;
+  }
+
+  #side_navbar li:not(#close_button)
+  {
+    margin-top: 2vh;
+  }
+
+  #close_button
+  {
+    margin-top: 4vh;
+    margin-bottom: 20vh;
+  }
+
+  #side_navbar
+  {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 60vw;
+    background: #E7EEF8;
+    transform: translateX(-100%);
+    z-index: 1;
+  }
+
+  a
+  {
+    font-size: 2.5vh;
+  }
+
+  #hamburger
+  {
+    display: block;
+  }
+
+  #hamburger:hover, #close_button:hover
+  {
+    cursor: pointer;
+  }
 }
