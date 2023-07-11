@@ -12,6 +12,7 @@ body
   background: linear-gradient(to right bottom, #9ADFF5, #A17AFF);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 /* width of Scrollbar */
@@ -89,6 +90,13 @@ li
 {
   display: inline;
   margin-left: 5vmin;
+  transition-duration: 0.5s;
+}
+
+li:hover
+{
+  transform: scale(1.15);
+  transition-duration: 0.5s;
 }
 
 a

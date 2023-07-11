@@ -32,6 +32,14 @@
   animation-delay: 0;
 }
 
+/* If User reaches the Error Page then the Footer is fixed to the bottom of the Page */
+.error_page
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 @media screen and (min-width: 1024px)
 {
   #copyright
@@ -65,24 +73,21 @@ p
 {
   p
   {
-    font-size: 1.5vh;
+    font-size: 2vh;
   }
 
-  #copyright
+  #copyright span
   {
-/*TODO*/
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vmin;
   }
 
   #impressum
   {
-/*TODO*/
-  }
-
-  #footer
-  {
     display: block;
-    justify-content: center;
-    align-items: center;
+    margin-left: auto;
+    margin-right: 5vmin;
   }
 }
 
@@ -91,11 +96,20 @@ p
 {
   p
   {
-    font-size: 1.5vh;
+    font-size: 2vh;
   }
 
-  #copyright
+  #copyright span
   {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vmin;
+  }
+
+  #impressum
+  {
+    display: block;
+    margin-left: auto;
+    margin-right: 5vmin;
   }
 }

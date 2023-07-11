@@ -18,7 +18,7 @@ function Navbar() {
             <nav>
               <ul>
                 <li id='hamburger' onClick={openSideMenu}><img src='Images/menu.svg' alt='Hamburger Icon'/></li>
-                <li><a href='index.js'><img src='Images/logo.svg' alt='Logo'/></a></li>
+                <li><a href='/'><img src='Images/logo.svg' alt='Logo'/></a></li>
                 <li><a href='#'>Lebenslauf</a></li>
                 <li><a href='#'>Stärken</a></li>
                 <li><a href='#'>IT-Projekte</a></li>
