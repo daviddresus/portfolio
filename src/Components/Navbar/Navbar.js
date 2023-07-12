@@ -19,11 +19,11 @@ function Navbar() {
               <ul>
                 <li id='hamburger' onClick={openSideMenu}><img src='Images/menu.svg' alt='Hamburger Icon'/></li>
                 <li><a href='/'><img src='Images/logo.svg' alt='Logo'/></a></li>
-                <li><a href='#'>Lebenslauf</a></li>
-                <li><a href='#'>Stärken</a></li>
-                <li><a href='#'>IT-Projekte</a></li>
-                <li><a href='#'>Interessen</a></li>
-                <li><a href='#'>Portfolio</a></li>
+                <li><a href='/lebenslauf'>Lebenslauf</a></li>
+                <li><a href='/staerken'>Stärken</a></li>
+                <li><a href='/itprojekte'>IT-Projekte</a></li>
+                <li><a href='/interessen'>Interessen</a></li>
+                <li><a href='/portfolio'>Portfolio</a></li>
                 <li id='profile'><a href='#'><img src='Images/profile.svg' alt='Profile Icon'/></a></li>
               </ul>
             </nav>
@@ -33,12 +33,12 @@ function Navbar() {
               <nav>
                 <ul>
                   <li className='side_link' id='close_button' onClick={closeSideMenu}><img src='Images/close.svg' alt='Logo'/></li>
-                  <li className='side_link'><a href='#'><img src='Images/logo.svg' alt='Logo'/></a></li>
-                  <li className='side_link'><a href='#'>Lebenslauf</a></li>
-                  <li className='side_link'><a href='#'>Stärken</a></li>
-                  <li className='side_link'><a href='#'>IT-Projekte</a></li>
-                  <li className='side_link'><a href='#'>Interessen</a></li>
-                  <li className='side_link'><a href='#'>Portfolio</a></li>
+                  <li className='side_link'><a href='/'><img src='Images/logo.svg' alt='Logo'/></a></li>
+                  <li className='side_link'><a href='/lebenslauf'>Lebenslauf</a></li>
+                  <li className='side_link'><a href='/staerken'>Stärken</a></li>
+                  <li className='side_link'><a href='/itprojekte'>IT-Projekte</a></li>
+                  <li className='side_link'><a href='/interessen'>Interessen</a></li>
+                  <li className='side_link'><a href='/portfolio'>Portfolio</a></li>
                 </ul>
               </nav>
           </div>

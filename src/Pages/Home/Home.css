@@ -71,6 +71,12 @@
   }
 }
 
+#all_boxes
+{
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
 .box
 {
   display: flex;
