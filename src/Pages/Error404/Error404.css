@@ -1,3 +1,16 @@
+@keyframes appear
+{
+  0% 
+  {
+    opacity: 0;
+  }
+
+  100% 
+  {
+    opacity: 1;
+  }
+}
+
 #error_box
 {
   display: flex;
@@ -7,21 +20,23 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: appear 2s;
+  animation-delay: 0;
 }
 
-h1
+#error_box h1
 {
   color: rgb(255, 0, 0, 0.75);
   font-size: 14vh;
 }
 
-h2
+#error_box h2
 {
   color: rgb(0, 0, 0);
   font-size: 4vh;
 }
 
-h3
+#error_box h3
 {
   color: rgb(0, 0, 0);
   font-size: 2vh;

@@ -1,13 +1,11 @@
 * 
 {
   font-family: "Roboto", sans-serif;
-  /*the font family can be changed in this line (currently using "Geneva")*/
   padding: 0;
   margin: 0;
 }
 
 body
-/*default grandient color if the video can't be loaded*/
 {
   background: linear-gradient(to right bottom, #9ADFF5, #A17AFF);
   background-repeat: no-repeat;
