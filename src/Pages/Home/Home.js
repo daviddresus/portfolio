@@ -2,7 +2,7 @@ import './Home.css'
 
 export default function Home() {
     return (
-        <div id='all_boxes'>
+        <div id='all_content_boxes'>
             <div className='box'>
                 <div className='content_box'>
                     <p className='box_title'>Lebenslauf</p>

@@ -1,7 +1,8 @@
 import './Staerken.css'
+import Title from '../../Components/Title/Title.js';
 
 export default function Staerken() {
   return (
-    <div>Staerken</div>
+    <Title text="Stärken"/>
   )
 }

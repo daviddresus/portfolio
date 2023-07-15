@@ -1,0 +1,118 @@
+#all_project_boxes
+{
+    margin-bottom: 5%;
+}
+
+.project_box
+{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1vw solid rgba(255, 255, 255, 0.3);
+    /*makes it so that the border isn't on top of the div*/
+    background-clip: padding-box;
+    width: 60vw;
+    height: 15vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.project_content
+{
+    height: auto;
+    width: 40vw;
+}
+
+.project_content h2
+{
+    color: #6882FF;
+    font-weight: 1000;
+    font-size: 3.5vh;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.project_content p
+{
+    color: #6882FF;
+    font-weight: 1000;
+    font-size: 2vh;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.project_box_switch
+{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1vw solid rgba(255, 255, 255, 0.3);
+    /*makes it so that the border isn't on top of the div*/
+    background-clip: padding-box;
+    width: 60vw;
+    height: 15vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.project_content_switch
+{
+    height: auto;
+    width: 40vw;
+    text-align: right;
+}
+
+.project_content_switch h2
+{
+    color: #6882FF;
+    font-weight: 1000;
+    font-size: 3.5vh;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.project_content_switch p
+{
+    color: #6882FF;
+    font-weight: 1000;
+    font-size: 2vh;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.project_image
+{
+    height: auto;
+    width: 15vw;
+}
+
+.vertical_line
+{
+    border-color: rgba(104, 130, 255, 0.65);
+    border-style: solid;
+    border-width: 0.2vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*Desktop*/
+@media screen and (min-width: 1024px)
+{
+
+}
+
+/*Smartphone*/
+@media screen and (max-width: 875px)
+{
+
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px)
+{
+
+}

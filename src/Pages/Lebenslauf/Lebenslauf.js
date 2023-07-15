@@ -1,7 +1,8 @@
 import './Lebenslauf.css'
+import Title from '../../Components/Title/Title.js';
 
 export default function Lebenslauf() {
   return (
-    <div>Lebenslauf</div>
+    <Title text="Lebenslauf"/>
   )
 }

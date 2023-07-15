@@ -61,7 +61,6 @@ header
 
 #navbar
 {
-  position: sticky;
   background: linear-gradient(to bottom,rgba(255, 255, 255, 0.65) 92%,rgb(255, 255, 255, 0.3) 92% 100%);
 }
 
