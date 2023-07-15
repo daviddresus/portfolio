@@ -202,6 +202,13 @@
         margin-bottom: 5%;
     }
 
+    .project_image:hover
+    {
+        cursor: zoom-in;
+        transform: scale(1.3);
+        transition-duration: 0.5s;
+    }
+
     .vertical_line
     {
         border-width: 0.6vw;
@@ -271,6 +278,13 @@
     {
         height: 60vw;
         margin-bottom: 5%;
+    }
+
+    .project_image:hover
+    {
+        cursor: zoom-in;
+        transform: scale(1.3);
+        transition-duration: 0.5s;
     }
 
     .vertical_line
