@@ -48,6 +48,7 @@
     font-size: 3.5vh;
     margin-left: 5%;
     margin-top: 5%;
+    word-wrap: break-word;
 }
 
 .project_content p
@@ -57,6 +58,7 @@
     font-size: 2vh;
     margin-left: 5%;
     margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 .project_box_switch
@@ -90,6 +92,7 @@
     font-size: 3.5vh;
     margin-right: 5%;
     margin-top: 5%;
+    word-wrap: break-word;
 }
 
 .project_content_switch p
@@ -99,12 +102,15 @@
     font-size: 2vh;
     margin-right: 5%;
     margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 .project_image
 {
     height: 15vw;
     transition-duration: 0.5s;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .project_image:hover
