@@ -13,7 +13,7 @@ export default function Home() {
             <hr className='line'></hr>
 
             <div className='box_switch'>
-                <p className='description_switch'>Meine bisherigen schulischen Werdegänge mit allen relevanten Informationen</p>
+                <p className='description_switch'>bla bla</p>
                 <div className='content_box_switch'>
                     <p className='box_title'>Stärken</p>
                 </div>
@@ -25,13 +25,13 @@ export default function Home() {
                 <div className='content_box'>
                     <p className='box_title'>IT-Projekte</p>
                 </div>
-                <p className='description'>Meine bisherigen schulischen Werdegänge mit allen relevanten Informationen</p>
+                <p className='description'>bla bla</p>
             </div>
 
             <hr className='line'></hr>
 
             <div className='box_switch'>
-                <p className='description_switch'>Meine bisherigen schulischen Werdegänge mit allen relevanten Informationen</p>
+                <p className='description_switch'>bla bla</p>
                 <div className='content_box_switch'>
                     <p className='box_title'>Interessen</p>
                 </div>
