@@ -1,11 +1,11 @@
 import './Navbar.css';
 
-const openSideMenu = () => 
+const openSideMenu = () =>
 {
   document.getElementById('side_navbar').style = "transform: translateX(0%); transition: 0.5s ease-in-out;";
 }
 
-const closeSideMenu = () => 
+const closeSideMenu = () =>
 {
   document.getElementById('side_navbar').style = "transform: translateX(-100%); transition: 0.5s ease-in-out;";
 }
