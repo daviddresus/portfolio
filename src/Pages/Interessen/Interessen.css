@@ -21,9 +21,10 @@
   transition-duration: 0.5s;
 }
 
-.intereset_title
+.interest_title
 {
   color: #6882FF;
+  padding: 4vw;
   font-size: 4vh;
   font-weight: 600;
   transform: rotateZ(-45deg);
