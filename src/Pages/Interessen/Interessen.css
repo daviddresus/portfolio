@@ -1,3 +1,10 @@
+#slider
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #all_interest_boxes
 {
   display: flex;
@@ -31,7 +38,22 @@
   transition-duration: 0.5s;
 }
 
-.button
+#left_button, #right_button
+{
+  z-index: 1;
+  position: absolute;
+}
+
+#left_button
 {
   position: absolute;
+  left: 0;
+  margin-left: 2vw;
+}
+
+#right_button
+{
+  position: absolute;
+  right: 0;
+  margin-right: 2vw;
 }
