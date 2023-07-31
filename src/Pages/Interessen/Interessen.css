@@ -81,16 +81,30 @@
   position: absolute;
 }
 
+#left_button:hover, #right_button:hover
+{
+  transform: scale(1.2);
+  cursor: pointer;
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
 #left_button
 {
   left: 0;
   margin-left: 2vw;
+  height: 4vw;
+  opacity: 0.7;
+  transition-duration: 0.5s;
 }
 
 #right_button
 {
   right: 0;
   margin-right: 2vw;
+  height: 4vw;
+  opacity: 0.7;
+  transition-duration: 0.5s;
 }
 
 .interest_image
@@ -138,6 +152,16 @@
   {
     height: 60vw;
   }
+
+  #left_button
+  {
+    height: 12vw;
+  }
+
+  #right_button
+  {
+    height: 12vw;
+  }
 }
 
 /*Tablet*/
@@ -177,5 +201,15 @@
   .interest_image
   {
     height: 60vw;
+  }
+
+  #left_button
+  {
+    height: 15vw;
+  }
+
+  #right_button
+  {
+    height: 15vw;
   }
 }
