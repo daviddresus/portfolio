@@ -1,3 +1,15 @@
+:root {
+  /* all spaces that are inside of the box are calculated together to the number below which defines the total box-width*/
+  --box-width: 28vw;
+  --space-between: 10vw;
+}
+
+#interest_body
+{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 #slider
 {
   display: flex;
@@ -10,6 +22,31 @@
   display: flex;
   justify-content: center;
   gap: 10vw;
+}
+
+.interest_content_box
+{
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 1vw solid rgba(255, 255, 255, 0.3);
+  /*makes it so that the border isn't on top of the div*/
+  background-clip: padding-box;
+  width: 60vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  animation: scaleUp ease-out 1.5s;
+  animation-delay: 0;
+}
+
+.interest_content_box p
+{
+  color: #6882FF;
+  font-weight: 1000;
+  font-size: 2vh;
+  margin: 1%;
 }
 
 .interest_box
@@ -46,14 +83,99 @@
 
 #left_button
 {
-  position: absolute;
   left: 0;
   margin-left: 2vw;
 }
 
 #right_button
 {
-  position: absolute;
   right: 0;
   margin-right: 2vw;
+}
+
+.interest_image
+{
+  height: 15vw;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*Smartphone*/
+@media screen and (max-width: 875px)
+{
+  #slider
+  {
+    margin-top: 10%;
+  }
+
+  #all_interest_boxes
+  {
+    gap: 20vw;
+  }
+
+  .interest_box
+  {
+    width: 30vw;
+    height: 30vw;
+    border: 2vw solid rgba(255, 255, 255, 0.3);
+  }
+
+  .interest_content_box
+  {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    border: 2vw solid rgba(255, 255, 255, 0.3);
+  }
+
+  .interest_title
+  {
+    font-size: 2.25vh;
+  }
+
+  .interest_image
+  {
+    height: 60vw;
+  }
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px)
+{
+  #slider
+  {
+    margin-top: 10%;
+  }
+
+  #all_interest_boxes
+  {
+    gap: 20vw;
+  }
+
+  .interest_box
+  {
+    width: 30vw;
+    height: 30vw;
+    border: 2vw solid rgba(255, 255, 255, 0.3);
+  }
+
+  .interest_content_box
+  {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    border: 2vw solid rgba(255, 255, 255, 0.3);
+  }
+
+  .interest_title
+  {
+    font-size: 2.5vh;
+  }
+
+  .interest_image
+  {
+    height: 60vw;
+  }
 }

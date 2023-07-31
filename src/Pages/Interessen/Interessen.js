@@ -1,6 +1,6 @@
 import './Interessen.css'
 import Title from '../../Components/Title/Title.js';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Interessen() {
 
@@ -11,54 +11,65 @@ export default function Interessen() {
     // Add more items as needed
   ];
 
-  var placement = 0;
-  var item = 2;
+  const contextToTheItem = [
+    { text: 'First Placeholder', alt: 'Image', src: 'Images/the_last_chance.png', id: '1' },
+    { text: 'Second Placeholder', alt: 'Image', src: 'Images/logo.svg', id: '2' },
+    { text: 'Third Placeholder', alt: 'Image', src: 'Images/meine_erste_website.png', id: '3' }
+  ]
 
-  const transparency = () => {
-    if (items.length - item !== 0) {
-      document.getElementById(item).style = 'opacity: 1; transition: ease-in-out 0.5s';
-      document.getElementById(item + 1).style = 'opacity: 0.4; transition: ease-in-out 0.5s';
-    }
+  const getCssVariableValue = (variableName) => {
+    const styles = getComputedStyle(document.documentElement);
+    return parseInt(styles.getPropertyValue(variableName));
+  };
 
-    if (items.length - item !== 0 && items.length - item !== 1) {
-      document.getElementById(item + 2).style = 'opacity: 0; transition: ease-in-out 0.5s';
-    }
+  const boxWidth = getCssVariableValue('--box-width');
+  const spaceBetween = getCssVariableValue('--space-between');
 
-    if (item !== 1) {
-      document.getElementById(item).style = 'opacity: 1; transition: ease-in-out 0.5s';
-      document.getElementById(item - 1).style = 'opacity: 0.4; transition: ease-in-out 0.5s';
-    }
+  const [currentItem, setCurrentItem] = useState(2);
+  const [placement, setPlacement] = useState(0);
 
-    if (item !== 1 && item !== 2) {
-      document.getElementById(item - 2).style = 'opacity: 0; transition: ease-in-out 0.5s';
+  const interestContent = contextToTheItem[currentItem - 1];
+
+  useEffect(() => {
+    const allInterestBoxes = document.getElementById('all_interest_boxes');
+    allInterestBoxes.style.transition = 'transform ease-in-out 0.5s';
+    allInterestBoxes.style.transform = `translateX(${placement}%)`;
+    
+    updateOpacity();
+  }, [placement]);
+
+  const updateOpacity = () => {
+    for (let i = 1; i <= items.length; i++) {
+      const itemElement = document.getElementById(i);
+      if (i === currentItem) {
+        itemElement.style.opacity = '1';
+        itemElement.style.transform = 'scale(1) rotateZ(45deg)';
+      } else if (i === currentItem + 1 || i === currentItem - 1) {
+        itemElement.style.opacity = '0.4';
+        itemElement.style.transform = 'scale(0.7) rotateZ(45deg)';
+      } else {
+        itemElement.style.opacity = '0';
+        itemElement.style.transform = 'scale(0.5) rotateZ(45deg)';
+      }
     }
   };
 
-  //makes sure that the const transparency is executed even if no button was clicked
-  useEffect(() => {
-    transparency();
-  }, []);
-
   const goLeft = () => {
-    if (item !== 1) {
-      placement = placement + 27.2;
-      document.getElementById('all_interest_boxes').style = `transform: translateX(${placement}%); transition: ease-in-out 0.5s`;
-      item = item - 1;
-      transparency();
+    if (currentItem !== 1) {
+      setPlacement(placement + boxWidth + spaceBetween);
+      setCurrentItem(currentItem - 1);
     }
   };
 
   const goRight = () => {
-    if (items.length - item !== 0) {
-      placement = placement - 27.2;
-      document.getElementById('all_interest_boxes').style = `transform: translateX(${placement}%); transition: ease-in-out 0.5s`;
-      item = item + 1;
-      transparency();
+    if (items.length - currentItem !== 0) {
+      setPlacement(placement - boxWidth - spaceBetween);
+      setCurrentItem(currentItem + 1);
     }
   };
 
   return (
-    <div>
+    <div id='interest_body'>
       <Title text="Interessen" />
       <div id='slider'>
         <img id='left_button' src='Images/buttonleft.svg' alt='Left Button' onClick={goLeft} />
@@ -76,7 +87,7 @@ export default function Interessen() {
         <img id='right_button' src='Images/buttonright.svg' alt='Right Button' onClick={goRight} />
       </div>
 
-      <div className='project_box'></div>
+      <div className='interest_content_box'><img className='interest_image' alt={interestContent.alt} src={interestContent.src}/><p>{interestContent.text}</p></div>
     </div>
   )
 }
