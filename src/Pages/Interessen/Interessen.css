@@ -15,6 +15,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: appear ease-out 1.5s;
+  animation-delay: 0;
 }
 
 #all_interest_boxes
@@ -35,10 +37,8 @@
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
-  margin-bottom: 1%;
-  animation: scaleUp ease-out 1.5s;
-  animation-delay: 0;
+  margin-top: 6%;
+  margin-bottom: 5%;
 }
 
 .interest_content_box p

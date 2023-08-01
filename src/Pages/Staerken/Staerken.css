@@ -1,0 +1,80 @@
+#all_strength_boxes
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    gap: 7.5vw;
+    margin-bottom: 10%;
+}
+
+.strength_box
+{
+  width: 8vw;
+  height: 8vw;
+  transform: rotateZ(45deg);
+  background-color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  text-align: center;
+  align-items: center; 
+  justify-content: center;
+  border: 0.75vw solid rgba(255, 255, 255, 0.3);
+  /*makes it so that the border isn't on top of the div*/
+  background-clip: padding-box;
+  transition-duration: 0.5s;
+}
+
+.strength_title
+{
+  color: #6882FF;
+  padding: 4vw;
+  font-size: 3vh;
+  font-weight: 600;
+  transform: rotateZ(-45deg);
+  transition-duration: 0.5s;
+}
+
+/*Smartphone*/
+@media screen and (max-width: 875px)
+{
+    #all_strength_boxes
+    {
+      grid-template-columns: auto auto;
+      gap: 15vw;
+      margin-top: 10%;
+    }
+
+    .strength_box
+    {
+        width: 20vw;
+        height: 20vw;
+        border: 1.5vw solid rgba(255, 255, 255, 0.3);
+    }
+
+    .strength_title
+    {
+      font-size: 2.25vh;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px)
+{
+    #all_strength_boxes
+    {
+      grid-template-columns: auto auto;
+      gap: 15vw;
+      margin-top: 10%;
+    }
+
+    .strength_box
+    {
+        width: 20vw;
+        height: 20vw;
+        border: 1.5vw solid rgba(255, 255, 255, 0.3);
+    }
+
+    .strength_title
+    {
+      font-size: 2.5vh;
+    }
+}
