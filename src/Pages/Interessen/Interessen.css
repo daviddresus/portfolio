@@ -39,6 +39,8 @@
   margin-right: auto;
   margin-top: 6%;
   margin-bottom: 5%;
+  animation: scaleUp ease-out 1.5s;
+  animation-delay: 0;
 }
 
 .interest_content_box p

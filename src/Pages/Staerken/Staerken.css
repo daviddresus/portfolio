@@ -5,6 +5,7 @@
     justify-content: center;
     gap: 7.5vw;
     margin-bottom: 10%;
+    animation: appear ease-out 1.5s;
 }
 
 .strength_box
@@ -33,6 +34,23 @@
   transition-duration: 0.5s;
 }
 
+#progressbar
+{
+  position: absolute;
+  top: 62.5%;
+  left: 95%;
+  transform: translate(-99%, 0) rotateZ(-45deg);
+  width: 5vw;
+  height: 0.5vw;
+  background-color: #bcbdfc;
+}
+
+#percentage
+{
+  background-color: #6882FF;
+  height: 100%;
+}
+
 /*Smartphone*/
 @media screen and (max-width: 875px)
 {
@@ -53,6 +71,15 @@
     .strength_title
     {
       font-size: 2.25vh;
+    }
+
+    #progressbar
+    {
+      top: 62.5%;
+      left: 95%;
+      transform: translate(-99%, 0) rotateZ(-45deg);
+      width: 12vw;
+      height: 1vw;
     }
 }
 
@@ -76,5 +103,14 @@
     .strength_title
     {
       font-size: 2.5vh;
+    }
+
+    #progressbar
+    {
+      top: 62.5%;
+      left: 95%;
+      transform: translate(-99%, 0) rotateZ(-45deg);
+      width: 12vw;
+      height: 1vw;
     }
 }
