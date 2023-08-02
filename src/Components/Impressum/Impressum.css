@@ -1,0 +1,125 @@
+#impressum_box
+{
+    position: fixed;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: auto;
+    background-color: #E7EEF8;
+    /*makes it so that the border isn't on top of the div*/
+    background-clip: padding-box;
+    border: 1vw solid rgba(231, 238, 248, 0.3);
+    width: 60vw;
+    height: auto;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+}
+
+#impressum_box.active
+{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#impressum_close_button:hover
+{
+    cursor: pointer;
+    transform: scale(1.15);
+    transition-duration: 0.5s;
+}
+
+#impressum_close_button
+{
+    height: 3vw;
+    float: right;
+    margin-top: 2%;
+    margin-right: 2%;
+    transition-duration: 0.5s;
+}
+
+.impressum_title, .impressum_subtitle, .impressum_text
+{
+    color: #6882FF;
+    font-weight: 1000;
+    margin: 2% 0 2% 2%;
+}
+
+.impressum_title
+{
+    font-size: 6vh;
+}
+
+.impressum_subtitle
+{
+    font-size: 4vh;
+}
+
+.impressum_text
+{
+    font-size: 2vh;
+}
+
+/*Smartphone*/
+@media screen and (max-width: 875px)
+{
+    #impressum_box
+    {
+        width: 80vw;
+    }
+
+    .impressum_title
+    {
+        font-size: 4vh;
+    }
+
+    .impressum_subtitle
+    {
+        font-size: 3vh;
+    }
+
+    .impressum_text
+    {
+        font-size: 1.75vh;
+    }
+
+    #impressum_close_button
+    {
+        height: 7vw;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px)
+{
+    #impressum_box
+    {
+        width: 80vw;
+    }
+
+    .impressum_title
+    {
+        font-size: 4vh;
+    }
+
+    .impressum_subtitle
+    {
+        font-size: 3vh;
+    }
+
+    .impressum_text
+    {
+        font-size: 1.75vh;
+    }
+
+    #impressum_close_button
+    {
+        height: 7vw;
+    }
+}
