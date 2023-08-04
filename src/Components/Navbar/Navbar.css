@@ -104,7 +104,7 @@ a
 }
 
 /*Smartphone*/
-@media screen and (max-width: 875px)
+@media screen and (max-width: 875px) and (orientation: portrait)
 {
   /*:not('className') makes it so that the tag with that class is not affected by this styling*/
   li:not(#profile, #hamburger, .side_link)
@@ -159,7 +159,7 @@ a
 }
 
 /*Tablet*/
-@media screen and (min-width: 875px) and (max-width: 1023px)
+@media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
 {
   li:not(#profile, #hamburger, .side_link)
   {

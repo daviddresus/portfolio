@@ -179,7 +179,7 @@
 }
 
 /*Smartphone*/
-@media screen and (max-width: 875px)
+@media screen and (max-width: 875px) and (orientation: portrait)
 {
   .box_title
   {
@@ -193,14 +193,14 @@
   }
 
   .content_box
-{
+  {
     width: 35vw;
     height: 35vw;
     border: 2vw solid rgba(255, 255, 255, 0.3);
     margin-left: auto;
     margin-right: auto;
     margin-top: 8vh;
-}
+  }
 
   .description
   {
@@ -236,7 +236,7 @@
 }
 
 /*Tablet*/
-@media screen and (min-width: 875px) and (max-width: 1023px)
+@media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
 {
   .box_title
   {

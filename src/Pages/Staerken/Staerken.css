@@ -52,7 +52,7 @@
 }
 
 /*Smartphone*/
-@media screen and (max-width: 875px)
+@media screen and (max-width: 875px) and (orientation: portrait)
 {
     #all_strength_boxes
     {
@@ -84,7 +84,7 @@
 }
 
 /*Tablet*/
-@media screen and (min-width: 875px) and (max-width: 1023px)
+@media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
 {
     #all_strength_boxes
     {
