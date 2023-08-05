@@ -21,7 +21,8 @@ function Footer() {
         { path: '/staerken'},
         { path: '/itprojekte'},
         { path: '/interessen'},
-        { path: '/portfolio'}
+        { path: '/portfolio'},
+        { path: '/login'}
     ];
 
     const isPageFound = useRouteMatch(routes);

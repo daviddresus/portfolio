@@ -10,6 +10,8 @@ const closeSideMenu = () =>
   document.getElementById('side_navbar').style = "transform: translateX(-100%); transition: 0.5s ease-in-out;";
 }
 
+/* <li id='profile'><a href='#'><img src='Images/profile.svg' alt='Profile Icon'/></a></li> */
+
 function Navbar() {
   return (
     <div>
@@ -24,7 +26,7 @@ function Navbar() {
                 <li><a href='/itprojekte'>IT-Projekte</a></li>
                 <li><a href='/interessen'>Interessen</a></li>
                 <li><a href='/portfolio'>Portfolio</a></li>
-                <li id='profile'><a href='#'><img src='Images/profile.svg' alt='Profile Icon'/></a></li>
+                <li id='profile'><a href='/login'>Einloggen</a></li>
               </ul>
             </nav>
         </div>

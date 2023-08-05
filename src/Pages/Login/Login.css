@@ -1,0 +1,85 @@
+::placeholder
+{
+    color: rgba(104, 130, 255, 0.5);
+    font-size: 1.25vh;
+    opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder
+{
+    /* Internet Explorer 10-11 */
+    font-size: 1.25vh;
+    color: rgba(104, 130, 255, 0.5);
+}
+
+::-ms-input-placeholder
+{
+    /* Microsoft Edge */
+    font-size: 1.25vh;
+    color: rgba(104, 130, 255, 0.5);
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin: 10% 5% 10% 5%;
+}
+
+#login_form
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    width: 15vw;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.65);
+    /*makes it so that the border isn't on top of the div*/
+    background-clip: padding-box;
+    border: 0.75vw solid rgba(231, 238, 248, 0.3);
+}
+
+input
+{
+    font-size: 1.25vh;
+    font-weight: 1000;
+    color: rgba(104, 130, 255, 1);
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.25vw solid rgba(104, 130, 255, 0.3);
+    transition-duration: 0.5s;
+}
+
+input:hover
+{
+    border-bottom: 0.25vw solid rgba(104, 130, 255, 0.6);
+    outline: none;
+    transition-duration: 0.5s;
+}
+
+input:focus
+{
+    border-bottom: 0.25vw solid rgba(104, 130, 255, 1);
+    outline: none;
+    transition-duration: 0.5s;
+}
+
+#login_button
+{
+    background-color: #9AADFC;
+    color: white;
+    font-weight: 1000;
+    font-size: 1.5vh;
+    border: none;
+    padding: 1%;
+    transition-duration: 0.5s;
+}
+
+#login_button:hover
+{
+    background-color: #6882FF;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
