@@ -1,21 +1,21 @@
 ::placeholder
 {
     color: rgba(104, 130, 255, 0.5);
-    font-size: 1.25vh;
+    font-size: 1.75vh;
     opacity: 1; /* Firefox */
 }
   
 :-ms-input-placeholder
 {
     /* Internet Explorer 10-11 */
-    font-size: 1.25vh;
+    font-size: 1.75vh;
     color: rgba(104, 130, 255, 0.5);
 }
 
 ::-ms-input-placeholder
 {
     /* Microsoft Edge */
-    font-size: 1.25vh;
+    font-size: 1.75vh;
     color: rgba(104, 130, 255, 0.5);
 }
 
@@ -24,7 +24,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #9AADFC;
+    -webkit-text-fill-color: #6882ff;
 }
 
 form
@@ -51,7 +51,7 @@ form
 
 input
 {
-    font-size: 1.25vh;
+    font-size: 1.75vh;
     font-weight: 1000;
     color: rgba(104, 130, 255, 1);
     background-color: transparent;
@@ -90,4 +90,82 @@ input:focus
     background-color: #6882FF;
     cursor: pointer;
     transition-duration: 0.5s;
+}
+
+/*Smartphone*/
+@media screen and (max-width: 875px) and (orientation: portrait)
+{
+    form
+    {
+        gap: 5vw;
+        margin: 10% 5% 10% 5%;
+    }
+    
+    #login_form
+    {
+        width: 45vw;
+        height: auto;
+        border: 1.5vw solid rgba(231, 238, 248, 0.3);
+    }
+
+    input
+    {
+        font-size: 2.5vh;
+        border-bottom: 1.5vw solid rgba(104, 130, 255, 0.3);
+    }
+
+    input:hover
+    {
+        border-bottom: 1.5vw solid rgba(104, 130, 255, 0.6);
+    }
+
+    input:focus
+    {
+        border-bottom: 1.5vw solid rgba(104, 130, 255, 1);
+    }
+
+    #login_button
+    {
+        font-size: 2vh;
+        padding: 2%;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
+{
+    form
+    {
+        gap: 5vw;
+        margin: 10% 5% 10% 5%;
+    }
+    
+    #login_form
+    {
+        width: 45vw;
+        height: auto;
+        border: 1.5vw solid rgba(231, 238, 248, 0.3);
+    }
+
+    input
+    {
+        font-size: 2.5vh;
+        border-bottom: 1.25vw solid rgba(104, 130, 255, 0.3);
+    }
+
+    input:hover
+    {
+        border-bottom: 1.25vw solid rgba(104, 130, 255, 0.6);
+    }
+
+    input:focus
+    {
+        border-bottom: 1.25vw solid rgba(104, 130, 255, 1);
+    }
+
+    #login_button
+    {
+        font-size: 2vh;
+        padding: 2%;
+    }
 }

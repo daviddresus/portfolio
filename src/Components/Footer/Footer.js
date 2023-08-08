@@ -23,7 +23,7 @@ function Footer() {
         { path: '/interessen'},
         { path: '/portfolio'},
         /*if login is not in routes then the footer will also be fixed to the bottom of the page*/
-        { path: '/login'}
+        //{ path: '/login'}
     ];
 
     const isPageFound = useRouteMatch(routes);
