@@ -53,7 +53,7 @@ export default function Home() {
                         <p className='box_title'>Portfolio</p>
                     </div>
                 </a>
-                <p className='description'>Meine Noten vom 1. bis zum 3. Schuljahr von der gibb und von bwd</p>
+                <p className='description'>Meine Noten vom 1. bis zum 2. Schuljahr von der gibb, von bbc und von bwd</p>
             </div>
         </div>
     )
