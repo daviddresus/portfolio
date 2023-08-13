@@ -48,10 +48,21 @@ body
   }
 }
 
+.invisible_box
+{
+  display: block;
+  width: auto;
+  height: 15vh;
+}
+
 header
 {
   animation: slideInTop ease-out 1.5s;
   animation-delay: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 #side_navbar, #hamburger
