@@ -1,4 +1,4 @@
-object
+#lebenslauf_viewer
 {
     display: block;
     margin: 0 auto 5% auto;
@@ -33,7 +33,7 @@ object
 /*Smartphone*/
 @media screen and (max-width: 875px) and (orientation: portrait)
 {
-    object
+    #lebenslauf_viewer
     {
         width: 50vw;
         height: auto;
@@ -49,7 +49,7 @@ object
 /*Tablet*/
 @media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
 {
-    object
+    #lebenslauf_viewer
     {
         width: 50vw;
         height: auto;

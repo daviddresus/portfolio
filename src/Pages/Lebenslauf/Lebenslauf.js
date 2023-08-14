@@ -5,7 +5,7 @@ export default function Lebenslauf() {
   return (
     <div>
       <Title text="Lebenslauf" />
-      <object data='Files/Lebenslauf.pdf' type='application/pdf' title="Lebenslauf">
+      <object data='Files/Lebenslauf.pdf' type='application/pdf' title="Lebenslauf" id='lebenslauf_viewer'>
         <div className='pdf_error_msg'>
           <p>Ihr Webbrowser kann diese PDF-Datei aktuell nicht anzeigen. Stattdessen können Sie eine Kopie davon herunterladen mit dem unten stehenden Link:</p>
         </div>

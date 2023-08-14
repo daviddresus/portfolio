@@ -13,6 +13,51 @@
   }
 }
 
+.project_box_with_abstract
+{
+    display: block;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tlc_viewer
+{
+    width: 40vw;
+    height: 55vw;
+    margin-left: 1vw;
+}
+
+.dropdown_button
+{
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-left: 5%;
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+.dropdown_button:hover
+{
+    opacity: 0.7;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.dropdown_icon
+{
+    height: 2vh;
+}
+
+span
+{
+    color: #6882FF;
+    font-weight: 1000;
+    font-size: 2vh;
+    margin-right: 1%;
+}
+
 #all_project_boxes
 {
     margin-bottom: 5%;
