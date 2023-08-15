@@ -1,0 +1,11 @@
+.contentOpen
+{
+    height: 100vw;
+    transition: height 1s ease-in-out;
+}
+
+.contentClosed
+{
+    height: 0;
+    transition: height 1s ease-in-out;
+}

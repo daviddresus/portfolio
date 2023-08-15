@@ -1,39 +1,27 @@
 import './Itprojekte.css';
 import Title from '../../Components/Title/Title.js';
 
-const openAbstract = () => {
-  document.getElementsByClassName('dropdown_icon')[0].style = "transform: rotateZ(180deg); transition: 0.5s ease-in-out;";
-}
+import Dropdown from '../../Components/DropDown/Dropdown.js';
+import Abstract from '../../Components/Abstract/Abstract.js';
 
 export default function Itprojekte() {
+
   return (
     <div>
       <Title text="IT-Projekte" />
       <div id='all_project_boxes'>
-        <div className='project_box_with_abstract'>
-          <div className='project_box'>
-            <div className='project_content'>
-              <h2>Meine erste Website</h2>
-              <p>Meine erste Website habe ich im Praxistraining der gibb angefangen. Für diese Website wurde nur HTML 5 und CSS angewendet. Diese Website sollte mich vorstellen können.</p>
-              <div className='dropdown_button' onClick={openAbstract}>
-                <span>Abstract</span><img src='Images/dropdown.svg' alt='Dropdown Icon' className='dropdown_icon' />
-              </div>
-            </div>
-
-            <hr className='vertical_line'></hr>
-
-            <img className='project_image' src='Images/meine_erste_website.png' alt='Alte Website'></img>
+        <div className='project_box'>
+          <div className='project_content'>
+            <h2>Meine erste Website</h2>
+            <p>Meine erste Website habe ich im Praxistraining der gibb angefangen. Für diese Website wurde nur HTML 5 und CSS angewendet. Diese Website sollte mich vorstellen können.</p>
           </div>
-          <object data='Files/IMS_Projekt_Survival_shooter_Game.pdf' type='application/pdf' title="The Last Chance" id='tlc_viewer'>
-            <div className='pdf_error_msg'>
-              <p>Ihr Webbrowser kann diese PDF-Datei aktuell nicht anzeigen. Stattdessen können Sie eine Kopie davon herunterladen mit dem unten stehenden Link:</p>
-            </div>
 
-            <div className='pdf_download_link'>
-              <a href="Files/IMS_Projekt_Survival_shooter_Game.pdf" download="IMS_Projekt_Survival_shooter_Game">Clicken Sie Hier um Ihren download zu starten</a>
-            </div>
-          </object>
+          <hr className='vertical_line'></hr>
+
+          <img className='project_image' src='Images/meine_erste_website.png' alt='Alte Website'></img>
         </div>
+
+        <Dropdown content={Abstract} title={'Abstract'}/>
 
         <div className='project_box_switch'>
           <div className='project_content_switch'>
@@ -46,30 +34,16 @@ export default function Itprojekte() {
           <img className='project_image' src='Images/the_last_chance.png' alt='Alte Website'></img>
         </div>
 
-        <div className='project_box_with_abstract'>
-          <div className='project_box'>
-            <div className='project_content'>
-              <h2>Meine erste Bewerbungswebsite</h2>
-              <p>bla bla</p>
-              <div className='dropdown_button'>
-                <span>Abstract</span><img src='Images/dropdown.svg' alt='Dropdown Icon' className='dropdown_icon' />
-              </div>
-            </div>
-
-            <hr className='vertical_line'></hr>
-
-            <img className='project_image' src='Images/meine_erste_website.png' alt='Alte Website'></img>
-
+        <div className='project_box'>
+          <div className='project_content'>
+            <h2>Meine erste Bewerbungswebsite</h2>
+            <p>bla bla</p>
           </div>
-          <object data='Files/IMS_Projekt_Survival_shooter_Game.pdf' type='application/pdf' title="The Last Chance" id='tlc_viewer'>
-            <div className='pdf_error_msg'>
-              <p>Ihr Webbrowser kann diese PDF-Datei aktuell nicht anzeigen. Stattdessen können Sie eine Kopie davon herunterladen mit dem unten stehenden Link:</p>
-            </div>
 
-            <div className='pdf_download_link'>
-              <a href="Files/IMS_Projekt_Survival_shooter_Game.pdf" download="IMS_Projekt_Survival_shooter_Game">Clicken Sie Hier um Ihren download zu starten</a>
-            </div>
-          </object>
+          <hr className='vertical_line'></hr>
+
+          <img className='project_image' src='Images/meine_erste_website.png' alt='Alte Website'></img>
+
         </div>
 
         <div className='project_box_switch'>
