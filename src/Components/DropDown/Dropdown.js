@@ -14,7 +14,7 @@ import styles from '../../Components/DropDown/Dropdown.module.css';
 export default function Dropdown({ content, title }) {
     const [canRun, setCanRun] = useState(true)
     const [open, setOpen] = useState(false)
-    const [svgStyle, setStyle] = useState({rotate: '-180deg'})
+    const [svgStyle, setStyle] = useState({rotate: '180deg'})
 
     const handleToggle = () => {
         if (!canRun) return
@@ -22,7 +22,7 @@ export default function Dropdown({ content, title }) {
         window.setTimeout(toggleRun, 1000)
         
         setOpen(!open)
-        if (open) return setStyle({rotate: '-180deg'})
+        if (open) return setStyle({rotate: ''})
         return setStyle({})
     }
 
@@ -33,7 +33,7 @@ export default function Dropdown({ content, title }) {
     return (
         <div>
             <div className={`${styles.dropdown}`} onClick={handleToggle}>
-                <h2>{title}</h2>
+                <h2>{title}</h2><img src='Images/dropdown.svg' alt='Dropdown Icon' style={svgStyle}/>
             </div>
             <div className={`${styles.content} ${open ? styles.contentOpen : styles.contentClosed}`}>
                 {content}
