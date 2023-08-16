@@ -10,19 +10,20 @@ export default function Itprojekte() {
     <div>
       <Title text="IT-Projekte" />
       <div id='all_project_boxes'>
-        <div className='project_box'>
-          <div className='project_content'>
-            <h2>Meine erste Website</h2>
-            <p>Meine erste Website habe ich im Praxistraining der gibb angefangen. Für diese Website wurde nur HTML 5 und CSS angewendet. Diese Website sollte mich vorstellen können.</p>
+        <div className='project_box_with_abstract'>
+          <div className='project_box'>
+            <div className='project_content'>
+              <h2>Meine erste Website</h2>
+              <p>Meine erste Website habe ich im Praxistraining der gibb angefangen. Für diese Website wurde nur HTML 5 und CSS angewendet. Diese Website sollte mich vorstellen können.</p>
+            </div>
+
+            <hr className='vertical_line'></hr>
+
+            <img className='project_image' src='Images/meine_erste_website.png' alt='Alte Website'></img>
           </div>
-
-          <hr className='vertical_line'></hr>
-
-          <img className='project_image' src='Images/meine_erste_website.png' alt='Alte Website'></img>
+          <Dropdown content={<Abstract data='Files/IMS_Projekt_Survival_shooter_Game.pdf' title='The Last Chance'/>} title={'Abstract'} />
         </div>
-
-        <Dropdown content={Abstract} title={'Abstract'}/>
-
+        
         <div className='project_box_switch'>
           <div className='project_content_switch'>
             <h2>The Last Chance</h2>

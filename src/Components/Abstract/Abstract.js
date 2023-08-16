@@ -1,9 +1,9 @@
 import './Abstract.css';
 
-export default function Abstract() {
+export default function Abstract({ data, title }) {
     return (
-        <div id='abstract'>
-            <object data='Files/IMS_Projekt_Survival_shooter_Game.pdf' type='application/pdf' title="The Last Chance" className='abstract_viewer'>
+        <div>
+            <object data={data} type='application/pdf' title={title} className='abstract_viewer'>
                 <div className='pdf_error_msg'>
                     <p>Ihr Webbrowser kann diese PDF-Datei aktuell nicht anzeigen. Stattdessen können Sie eine Kopie davon herunterladen mit dem unten stehenden Link:</p>
                 </div>
