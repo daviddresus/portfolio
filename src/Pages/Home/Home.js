@@ -10,9 +10,9 @@ export default function Home() {
 
     const links = [
         { title: 'Lebenslauf', redirect: '/lebenslauf', desc: 'Meine bisherigen schulischen Werdegänge mit allen relevanten Informationen', id: '1' },
-        { title: 'Stärken', redirect: '/staerken', desc: 'bla bla', id: '2' },
-        { title: 'IT-Projekte', redirect: '/itprojekte', desc: 'bla bla', id: '3' },
-        { title: 'Interessen', redirect: '/interessen', desc: 'bla bla', id: '4' },
+        { title: 'Stärken', redirect: '/staerken', desc: 'All meine IT-Kenntnisse, die ich momentan habe und wie gut ich diese jeweils beherrsche', id: '2' },
+        { title: 'IT-Projekte', redirect: '/itprojekte', desc: 'Einige Projekte, die ich persönlich als grosse Fortschritte empfinde', id: '3' },
+        { title: 'Interessen', redirect: '/interessen', desc: 'All das, was ich in meiner Freizeit mache oder was ich sonst gerne mache', id: '4' },
         { title: 'Portfolio', redirect: '/portfolio', desc: 'Meine Noten vom 1. bis zum 2. Schuljahr von der gibb, von bbc und von bwd', id: '5' }
     ];
 

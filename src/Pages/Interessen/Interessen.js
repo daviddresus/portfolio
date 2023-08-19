@@ -12,7 +12,6 @@ export default function Interessen() {
     { title: 'Frontend', id: '1' },
     { title: 'Game Development', id: '2' },
     { title: 'Editing', id: '3' }
-    // Add more items as needed
   ];
 
   const contextToTheItem = [
