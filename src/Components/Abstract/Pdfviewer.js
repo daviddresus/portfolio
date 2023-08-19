@@ -1,9 +1,9 @@
-import './Abstract.css';
+import './Pdfviewer.css';
 
 export default function Abstract({ data, title }) {
     return (
         <div>
-            <object data={data} type='application/pdf' title={title} className='abstract_viewer'>
+            <object data={data} type='application/pdf' title={title} className='pdf_viewer'>
                 <div className='pdf_error_msg'>
                     <p>Ihr Webbrowser kann diese PDF-Datei aktuell nicht anzeigen. Stattdessen können Sie eine Kopie davon herunterladen mit dem unten stehenden Link:</p>
                 </div>

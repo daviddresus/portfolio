@@ -8,12 +8,11 @@ export default function Staerken() {
     { title: 'CSS', percentage: '80', id: '2' },
     { title: 'JS', percentage: '60', id: '3' },
     { title: 'Java', percentage: '60', id: '4' },
-    { title: 'PHP', percentage: '45', id: '5' },
-    { title: 'C#', percentage: '40', id: '6' },
+    { title: 'PHP', percentage: '40', id: '5' },
+    { title: 'C#', percentage: '20', id: '6' },
     { title: 'Git', percentage: '65', id: '7' },
     { title: 'Python', percentage: '50', id: '8' },
     { title: 'MySQL', percentage: '80', id: '9' },
-    { title: 'Apache', percentage: '50', id: '100' }
     // Add more items as needed
   ];
 

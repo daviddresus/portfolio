@@ -1,13 +1,29 @@
+@keyframes scaleUp
+{
+  0% 
+  {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% 
+  {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .dropdown_box
 {
     width: auto;
+    animation: scaleUp ease-out 1.5s;
+    animation-delay: 0;
 }
 
 .dropdown
 {
     display: flex;
     color: #6882FF;
-    padding: 1.5%;
     font-weight: 1000;
     font-size: 2vh;
     background-color: rgba(255, 255, 255, 0.65);
@@ -24,6 +40,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 1.5%;
     transition-duration: 0.5s;
 }
 
@@ -60,4 +77,16 @@
     width: auto;
     max-height: 0;
     transition: max-height 1s ease-in-out;
+}
+
+/*Smartphone*/
+@media screen and (max-width: 875px) and (orientation: portrait)
+{
+    
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
+{
+
 }

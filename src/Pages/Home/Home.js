@@ -1,60 +1,38 @@
-import './Home.css'
+import './Home.css';
 
 export default function Home() {
+
+    const links = [
+        { title: 'Lebenslauf', redirect: '/lebenslauf', desc: 'Meine bisherigen schulischen Werdegänge mit allen relevanten Informationen', id: '1' },
+        { title: 'Stärken', redirect: '/staerken', desc: 'bla bla', id: '2' },
+        { title: 'IT-Projekte', redirect: '/itprojekte', desc: 'bla bla', id: '3' },
+        { title: 'Interessen', redirect: '/interessen', desc: 'bla bla', id: '4' },
+        { title: 'Portfolio', redirect: '/portfolio', desc: 'Meine Noten vom 1. bis zum 2. Schuljahr von der gibb, von bbc und von bwd', id: '5' }
+    ];
+
+    const evenOrOddClasses = (id) => {
+        const boxClassName = id % 2 === 0 ? 'box_switch' : 'box';
+        const descClassName = id % 2 === 0 ? 'description_switch' : 'description';
+        const contentClassName = id % 2 === 0 ? 'content_box_switch' : 'content_box';
+        return { boxClassName, descClassName, contentClassName };
+    }
+
     return (
         <div id='all_content_boxes'>
-            <div className='box'>
-                <a href='/lebenslauf'>
-                    <div className='content_box'>
-                        <p className='box_title'>Lebenslauf</p>
+            {links.map((link, index) => (
+                <div key={index}>
+                    <div className={evenOrOddClasses(link.id).boxClassName}>
+                        <a href={link.redirect}>
+                            <div className={evenOrOddClasses(link.id).contentClassName}>
+                                <p className='box_title'>{link.title}</p>
+                            </div>
+                        </a>
+                        <p className={evenOrOddClasses(link.id).descClassName}>{link.desc}</p>
                     </div>
-                </a>
-                <p className='description'>Meine bisherigen schulischen Werdegänge mit allen relevanten Informationen</p>
-            </div>
-
-            <hr className='line'></hr>
-
-            <div className='box_switch'>
-                <p className='description_switch'>bla bla</p>
-                <a href='/staerken'>
-                    <div className='content_box_switch'>
-                        <p className='box_title'>Stärken</p>
-                    </div>
-                </a>
-            </div>
-
-            <hr className='line'></hr>
-
-            <div className='box'>
-                <a href='/itprojekte'>
-                    <div className='content_box'>
-                        <p className='box_title'>IT-Projekte</p>
-                    </div>
-                </a>
-                <p className='description'>bla bla</p>
-            </div>
-
-            <hr className='line'></hr>
-
-            <div className='box_switch'>
-                <p className='description_switch'>bla bla</p>
-                <a href='/interessen'>
-                    <div className='content_box_switch'>
-                        <p className='box_title'>Interessen</p>
-                    </div>
-                </a>
-            </div>
-
-            <hr className='line'></hr>
-
-            <div className='box'>
-                <a href='/portfolio'>
-                    <div className='content_box'>
-                        <p className='box_title'>Portfolio</p>
-                    </div>
-                </a>
-                <p className='description'>Meine Noten vom 1. bis zum 2. Schuljahr von der gibb, von bbc und von bwd</p>
-            </div>
+                    {/* makes it so that the last element doesn't have a line below him */}
+                    {index !== links.length - 1 && <hr className='line'></hr>}
+                </div>
+            ))}
         </div>
     )
 }

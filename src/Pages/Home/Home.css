@@ -159,6 +159,7 @@
 .box_switch
 {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   margin-right: 15%;
 }
@@ -213,7 +214,7 @@
 
   .box_switch {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
   }
@@ -270,7 +271,7 @@
 
   .box_switch {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
   }
