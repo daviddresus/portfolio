@@ -1,6 +1,12 @@
 import './Home.css';
 
+import React, { useEffect } from 'react';
+
 export default function Home() {
+
+    useEffect(() => {
+        document.title = 'Home';
+      }, []);
 
     const links = [
         { title: 'Lebenslauf', redirect: '/lebenslauf', desc: 'Meine bisherigen schulischen Werdegänge mit allen relevanten Informationen', id: '1' },

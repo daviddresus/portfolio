@@ -1,7 +1,14 @@
 import './Login.css';
 import Title from '../../Components/Title/Title.js';
 
+import React, { useEffect } from 'react';
+
 export default function Login() {
+
+  useEffect(() => {
+    document.title = 'Login';
+  }, []);
+
   return (
     <div>
         <Title text="Login"/>

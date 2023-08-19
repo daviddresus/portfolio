@@ -1,8 +1,12 @@
-import './Interessen.css'
+import './Interessen.css';
 import Title from '../../Components/Title/Title.js';
 import { useState, useEffect } from 'react';
 
 export default function Interessen() {
+
+  useEffect(() => {
+    document.title = 'Interessen';
+  }, []);
 
   const items = [
     { title: 'Frontend', id: '1' },

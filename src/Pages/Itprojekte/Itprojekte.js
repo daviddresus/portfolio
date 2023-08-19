@@ -4,7 +4,13 @@ import Title from '../../Components/Title/Title.js';
 import Dropdown from '../../Components/DropDown/Dropdown.js';
 import Abstract from '../../Components/Abstract/Pdfviewer.js';
 
+import React, { useEffect } from 'react';
+
 export default function Itprojekte() {
+
+  useEffect(() => {
+    document.title = 'IT-Projekte';
+  }, []);
 
   const projects = [
     { title: 'Meine erste Website', text: 'Meine erste Website habe ich im Praxistraining der gibb angefangen. Für diese Website wurde nur HTML 5 und CSS angewendet. Diese Website sollte mich vorstellen können.', img: '/Images/meine_erste_website.png', pdf_file: 'Files/IMS_Projekt_Survival_shooter_Game.pdf', pdf_title: 'The Last Chance', id: '1' },

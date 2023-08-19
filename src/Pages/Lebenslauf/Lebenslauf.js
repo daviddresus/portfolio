@@ -1,7 +1,14 @@
-import './Lebenslauf.css'
+import './Lebenslauf.css';
 import Title from '../../Components/Title/Title.js';
 
+import React, { useEffect } from 'react';
+
 export default function Lebenslauf() {
+
+  useEffect(() => {
+    document.title = 'Lebenslauf';
+  }, []);
+
   return (
     <div>
       <Title text="Lebenslauf" />

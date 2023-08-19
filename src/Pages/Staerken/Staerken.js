@@ -1,7 +1,13 @@
-import './Staerken.css'
+import './Staerken.css';
 import Title from '../../Components/Title/Title.js';
 
+import React, { useEffect } from 'react';
+
 export default function Staerken() {
+
+  useEffect(() => {
+    document.title = 'Stärken';
+  }, []);
 
   const items = [
     { title: 'HTML', percentage: '85', id: '1' },

@@ -1,6 +1,13 @@
-import './Error404.css'
+import './Error404.css';
+
+import React, { useEffect } from 'react';
 
 export default function Error404() {
+
+    useEffect(() => {
+        document.title = 'Error';
+      }, []);
+
     return (
         <div>
             <div id="error_box">
