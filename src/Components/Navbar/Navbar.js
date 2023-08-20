@@ -1,5 +1,7 @@
 import './Navbar.css';
 
+import { useEffect, useState } from 'react';
+
 const openSideMenu = () => {
   document.getElementById('side_navbar').style = "transform: translateX(0%); transition: 0.5s ease-in-out;";
 }
@@ -8,34 +10,48 @@ const closeSideMenu = () => {
   document.getElementById('side_navbar').style = "transform: translateX(-100%); transition: 0.5s ease-in-out;";
 }
 
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-
-  var links = document.getElementsByClassName("link");
-
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    //When scrolling down:
-    document.getElementById("navbar_content_holder").style = "height: 7.5vh; transition-duration: 0.5s";
-    document.getElementById("logo").style = "height: 4vh; transition-duration: 0.5s";
-    document.getElementById("hamburger_icon").style = "height: 4vh; transition-duration: 0.5s";
-    for (var i = 0, length = links.length; i < length; i++) {
-      links[i].style = "font-size: 1.5vh; transition-duration: 0.5s;";
-    }
-  } else {
-    //When at the top:
-    document.getElementById("navbar_content_holder").style = "height: 15vh; transition-duration: 0.5s";
-    document.getElementById("logo").style = "height: 7vh; transition-duration: 0.5s";
-    document.getElementById("hamburger_icon").style = "height: 7vh; transition-duration: 0.5s";
-    for (var i = 0, length = links.length; i < length; i++) {
-      links[i].style = "font-size: 2.5vh; transition-duration: 0.5s;";
-    }
-  }
-}
-
 /* <li id='profile'><a href='#'><img src='Images/profile.svg' alt='Profile Icon'/></a></li> */
 
 function Navbar() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    async function checkSessionStatus() {
+      try {
+        const response = await fetch('/portfolio_backend/profile.php', {
+          method: 'GET',
+          credentials: 'include' // This is important for sending cookies
+        });
+
+        if (response.ok) {
+          setIsLoggedIn(true);
+        }
+      } catch (error) {
+        console.error('Error checking session:', error);
+      }
+    }
+
+    checkSessionStatus();
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       {/* Will make sure that the margin set between the nav and the Element below remains intact */}
@@ -43,15 +59,25 @@ function Navbar() {
       <header>
         <div id='navbar'>
           <nav>
-            <ul id='navbar_content_holder'>
-              <li id='hamburger' onClick={openSideMenu}><img src='Images/menu.svg' alt='Hamburger Icon' id='hamburger_icon' /></li>
-              <li><a href='/'><img src='Images/logo.svg' alt='Logo' id='logo' /></a></li>
-              <li><a className='link' href='/lebenslauf'>Lebenslauf</a></li>
-              <li><a className='link' href='/staerken'>Stärken</a></li>
-              <li><a className='link' href='/itprojekte'>IT-Projekte</a></li>
-              <li><a className='link' href='/interessen'>Interessen</a></li>
-              <li><a className='link' href='/portfolio'>Portfolio</a></li>
-              <li id='profile'><a className='link' href='/login'>Einloggen</a></li>
+            <ul style={{ height: isScrolled ? '7.5vh' : '15vh', transitionDuration: '0.5s' }} id='navbar_content_holder'>
+              <li id='hamburger' onClick={openSideMenu}>
+                <img src='Images/menu.svg' alt='Hamburger Icon' id='hamburger_icon' style={{ height: isScrolled ? '4vh' : '7vh', transitionDuration: '0.5s' }} />
+              </li>
+              <li>
+                <a href='/'>
+                  <img src='Images/logo.svg' alt='Logo' id='logo' style={{ height: isScrolled ? '4vh' : '7vh', transitionDuration: '0.5s' }} />
+                </a>
+              </li>
+              <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/lebenslauf'>Lebenslauf</a></li>
+              <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/staerken'>Stärken</a></li>
+              <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/itprojekte'>IT-Projekte</a></li>
+              <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/interessen'>Interessen</a></li>
+              <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/portfolio'>Portfolio</a></li>
+              {isLoggedIn ? (
+                <li id='profile' className='anti_hover'><img src='Images/profile.svg' alt='Profile Icon' id='profile_icon' style={{ height: isScrolled ? '4vh' : '7vh', transitionDuration: '0.5s'}} /></li>
+              ) : (
+                <li id='profile'><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/login'>Einloggen</a></li>
+              )}
             </ul>
           </nav>
         </div>
