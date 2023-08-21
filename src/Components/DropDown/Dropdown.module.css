@@ -90,7 +90,7 @@
     .contentOpen
     {
         width: auto;
-        max-height: 95vw;
+        max-height: 150vw;
         transition: max-height 1s ease-in-out;
     }
 }
@@ -106,7 +106,7 @@
     .contentOpen
     {
         width: auto;
-        max-height: 65vw;
+        max-height: 130vw;
         transition: max-height 1s ease-in-out;
     }
 }

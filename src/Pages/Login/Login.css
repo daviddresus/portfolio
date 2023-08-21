@@ -40,7 +40,7 @@ form
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5%;
+    margin-bottom: 27vh;
     width: 20vw;
     height: auto;
     background-color: rgba(255, 255, 255, 0.65);
@@ -104,6 +104,7 @@ input:focus
     #login_form
     {
         width: 60vw;
+        margin-bottom: 35vh;
         height: auto;
         border: 2vw solid rgba(231, 238, 248, 0.3);
     }
@@ -158,6 +159,7 @@ input:focus
     #login_form
     {
         width: 50vw;
+        margin-bottom: 35vh;
         height: auto;
         border: 2vw solid rgba(231, 238, 248, 0.3);
     }

@@ -10,8 +10,6 @@ const closeSideMenu = () => {
   document.getElementById('side_navbar').style = "transform: translateX(-100%); transition: 0.5s ease-in-out;";
 }
 
-/* <li id='profile'><a href='#'><img src='Images/profile.svg' alt='Profile Icon'/></a></li> */
-
 function Navbar() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);

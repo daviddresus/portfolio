@@ -100,7 +100,7 @@ ul
 
 li
 {
-  display: inline;
+  display: flex;
   margin-left: 5vmin;
   transition-duration: 0.5s;
 }

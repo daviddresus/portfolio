@@ -31,13 +31,13 @@
   animation-delay: 0;
 }
 
-/* If User reaches the Error Page then the Footer is fixed to the bottom of the Page */
-.error_page
-{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+  /* If User reaches the Error Page then the Footer is fixed to the bottom of the Page */
+  .error_page
+  {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 
 @media screen and (orientation: landscape)
 {
