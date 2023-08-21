@@ -14,11 +14,11 @@ export default function Itprojekte() {
 
   const projects = [
     { title: 'Meine erste Website', text: 'Meine erste Website habe ich im Praxistraining der gibb angefangen. Für diese Website wurde nur HTML 5 und CSS angewendet. Diese Website sollte mich vorstellen können.', img: '/Images/meine_erste_website.png', pdf_file: 'Files/IMS_Projekt_Survival_shooter_Game.pdf', pdf_title: 'The Last Chance', id: '1' },
-    { title: 'The Last Chance', text: 'The Last Chance ist ein Shooter Spiel, welches mit Javascript Programmiert wurde. In diesem Spiel muss der Spieler gegen einer unendlichen Anzahl an Zombies kämpfen.', img: 'Images/the_last_chance.png', pdf_file: '', pdf_name: '', id: '2' },
-    { title: 'Meine erste Bewerbungswebsite', text: 'bla bla', img: '', pdf_file: '', pdf_name: '', id: '3' },
-    { title: 'Discord Bot', text: 'bla bla', img: '', pdf_file: '', pdf_name: '', id: '4' },
-    { title: 'Maui App', text: 'bla bla', img: '', pdf_file: '', pdf_name: '', id: '5' },
-    { title: 'Android App', text: 'bla bla', img: '', pdf_file: '', pdf_name: '', id: '6' }
+    { title: 'The Last Chance', text: 'The Last Chance ist ein Shooter Spiel, welches mit Javascript Programmiert wurde. In diesem Spiel muss der Spieler gegen einer unendlichen Anzahl an Zombies kämpfen.', img: 'Images/the_last_chance.png', pdf_file: '', id: '2' },
+    { title: 'Meine erste Bewerbungswebsite', text: 'bla bla', img: '', pdf_file: '', id: '3' },
+    { title: 'Discord Bot', text: 'bla bla', img: '', pdf_file: '', id: '4' },
+    { title: 'Maui App', text: 'bla bla', img: '', pdf_file: '', id: '5' },
+    { title: 'Android App', text: 'bla bla', img: '', pdf_file: '', id: '6' }
   ];
 
   const evenOrOddClasses = (id) => {
