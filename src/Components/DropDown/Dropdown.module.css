@@ -82,11 +82,31 @@
 /*Smartphone*/
 @media screen and (max-width: 875px) and (orientation: portrait)
 {
+    .dropdown
+    {
+        height: 12.5vw;
+    }
 
+    .contentOpen
+    {
+        width: auto;
+        max-height: 95vw;
+        transition: max-height 1s ease-in-out;
+    }
 }
 
 /*Tablet*/
 @media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
 {
+    .dropdown
+    {
+        height: 10vw;
+    }
 
+    .contentOpen
+    {
+        width: auto;
+        max-height: 65vw;
+        transition: max-height 1s ease-in-out;
+    }
 }

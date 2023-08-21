@@ -1,21 +1,21 @@
 ::placeholder
 {
     color: rgba(104, 130, 255, 0.5);
-    font-size: 1.75vh;
+    font-size: 2vh;
     opacity: 1; /* Firefox */
 }
   
 :-ms-input-placeholder
 {
     /* Internet Explorer 10-11 */
-    font-size: 1.75vh;
+    font-size: 2vh;
     color: rgba(104, 130, 255, 0.5);
 }
 
 ::-ms-input-placeholder
 {
     /* Microsoft Edge */
-    font-size: 1.75vh;
+    font-size: 2vh;
     color: rgba(104, 130, 255, 0.5);
 }
 
@@ -31,7 +31,7 @@ form
 {
     display: flex;
     flex-direction: column;
-    gap: 2vw;
+    gap: 2.5vw;
     margin: 10% 5% 10% 5%;
 }
 
@@ -41,7 +41,7 @@ form
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
-    width: 15vw;
+    width: 20vw;
     height: auto;
     background-color: rgba(255, 255, 255, 0.65);
     /*makes it so that the border isn't on top of the div*/
@@ -51,25 +51,25 @@ form
 
 input
 {
-    font-size: 1.75vh;
+    font-size: 2vh;
     font-weight: 1000;
     color: rgba(104, 130, 255, 1);
     background-color: transparent;
     border: none;
-    border-bottom: 0.25vw solid rgba(104, 130, 255, 0.3);
+    border-bottom: 0.35vw solid rgba(104, 130, 255, 0.3);
     transition-duration: 0.5s;
 }
 
 input:hover
 {
-    border-bottom: 0.25vw solid rgba(104, 130, 255, 0.6);
+    border-bottom: 0.35vw solid rgba(104, 130, 255, 0.6);
     outline: none;
     transition-duration: 0.5s;
 }
 
 input:focus
 {
-    border-bottom: 0.25vw solid rgba(104, 130, 255, 1);
+    border-bottom: 0.35vw solid rgba(104, 130, 255, 1);
     outline: none;
     transition-duration: 0.5s;
 }
@@ -79,9 +79,9 @@ input:focus
     background-color: #9AADFC;
     color: white;
     font-weight: 1000;
-    font-size: 1.5vh;
+    font-size: 2vh;
     border: none;
-    padding: 1%;
+    padding: 2%;
     transition-duration: 0.5s;
 }
 
@@ -97,54 +97,15 @@ input:focus
 {
     form
     {
-        gap: 5vw;
+        gap: 7.5vw;
         margin: 10% 5% 10% 5%;
     }
     
     #login_form
     {
-        width: 45vw;
+        width: 60vw;
         height: auto;
-        border: 1.5vw solid rgba(231, 238, 248, 0.3);
-    }
-
-    input
-    {
-        font-size: 2.5vh;
-        border-bottom: 1.5vw solid rgba(104, 130, 255, 0.3);
-    }
-
-    input:hover
-    {
-        border-bottom: 1.5vw solid rgba(104, 130, 255, 0.6);
-    }
-
-    input:focus
-    {
-        border-bottom: 1.5vw solid rgba(104, 130, 255, 1);
-    }
-
-    #login_button
-    {
-        font-size: 2vh;
-        padding: 2%;
-    }
-}
-
-/*Tablet*/
-@media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
-{
-    form
-    {
-        gap: 5vw;
-        margin: 10% 5% 10% 5%;
-    }
-    
-    #login_form
-    {
-        width: 45vw;
-        height: auto;
-        border: 1.5vw solid rgba(231, 238, 248, 0.3);
+        border: 2vw solid rgba(231, 238, 248, 0.3);
     }
 
     input
@@ -166,6 +127,60 @@ input:focus
     #login_button
     {
         font-size: 2vh;
-        padding: 2%;
+        padding: 3%;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
+{
+    ::placeholder
+    {
+        font-size: 2.25vh;
+    }
+      
+    :-ms-input-placeholder
+    {
+        font-size: 2.25vh;
+    }
+    
+    ::-ms-input-placeholder
+    {
+        font-size: 2.25vh;
+    }
+
+    form
+    {
+        gap: 7.5vw;
+        margin: 10% 5% 10% 5%;
+    }
+    
+    #login_form
+    {
+        width: 50vw;
+        height: auto;
+        border: 2vw solid rgba(231, 238, 248, 0.3);
+    }
+
+    input
+    {
+        font-size: 2.5vh;
+        border-bottom: 1.25vw solid rgba(104, 130, 255, 0.3);
+    }
+
+    input:hover
+    {
+        border-bottom: 1.25vw solid rgba(104, 130, 255, 0.6);
+    }
+
+    input:focus
+    {
+        border-bottom: 1.25vw solid rgba(104, 130, 255, 1);
+    }
+
+    #login_button
+    {
+        font-size: 2vh;
+        padding: 3%;
     }
 }

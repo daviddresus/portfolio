@@ -6,30 +6,6 @@
     height: 55vw;
 }
 
-.pdf_error_msg
-{
-    display: block;
-    color: white;
-    font-weight: 1000;
-    font-size: 2.5vh;
-    text-align: center;
-    margin-bottom: 10%;
-}
-
-.pdf_download_link
-{
-    display: block;
-    text-align: center;
-    transition-duration: 0.5s;
-}
-
-.pdf_download_link:hover
-{
-    transform: scale(1.1);
-    cursor: pointer;
-    transition-duration: 0.5s;
-}
-
 /*Smartphone*/
 @media screen and (max-width: 875px) and (orientation: portrait)
 {
@@ -38,11 +14,6 @@
         width: 50vw;
         height: auto;
         margin: 20% auto 20% auto;
-    }
-    
-    .pdf_error_msg
-    {
-        margin-bottom: 20%;
     }
 }
 
@@ -54,10 +25,5 @@
         width: 50vw;
         height: auto;
         margin: 20% auto 20% auto;
-    }
-    
-    .pdf_error_msg
-    {
-        margin-bottom: 30%;
     }
 }

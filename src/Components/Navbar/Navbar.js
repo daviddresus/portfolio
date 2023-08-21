@@ -61,7 +61,7 @@ function Navbar() {
           <nav>
             <ul style={{ height: isScrolled ? '7.5vh' : '15vh', transitionDuration: '0.5s' }} id='navbar_content_holder'>
               <li id='hamburger' onClick={openSideMenu}>
-                <img src='Images/menu.svg' alt='Hamburger Icon' id='hamburger_icon' style={{ height: isScrolled ? '4vh' : '7vh', transitionDuration: '0.5s' }} />
+                <img src='Images/menu.svg' alt='Hamburger Icon' id='hamburger_icon' style={{ height: isScrolled ? '4vh' : '6vh', transitionDuration: '0.5s' }} />
               </li>
               <li>
                 <a href='/'>

@@ -2,7 +2,7 @@ import './Itprojekte.css';
 import Title from '../../Components/Title/Title.js';
 
 import Dropdown from '../../Components/DropDown/Dropdown.js';
-import Abstract from '../../Components/Abstract/Pdfviewer.js';
+import Pdfviewer from '../../Components/Abstract/Pdfviewer.js';
 
 import React, { useEffect } from 'react';
 
@@ -44,7 +44,7 @@ export default function Itprojekte() {
 
                 <img className='project_image' src={project.img} alt='Bild vom Projekt'></img>
               </div>
-              <Dropdown content={<Abstract data={project.pdf_file} title={project.pdf_title} />} title={'Abstract'} />
+              <Dropdown content={<Pdfviewer data={project.pdf_file} title={project.pdf_title} />} title={'Abstract'} />
             </div>
           </div>
         ))}

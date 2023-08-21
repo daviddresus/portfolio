@@ -1,6 +1,8 @@
 import './Lebenslauf.css';
 import Title from '../../Components/Title/Title.js';
 
+import Pdfviewer from '../../Components/Abstract/Pdfviewer.js';
+
 import React, { useEffect } from 'react';
 
 export default function Lebenslauf() {
@@ -21,6 +23,8 @@ export default function Lebenslauf() {
           <a href="Files/Lebenslauf.pdf" download="Lebenslauf">Clicken Sie Hier um Ihren download zu starten</a>
         </div>
       </object>
+
+      <Pdfviewer data='Files/Lebenslauf' title='Lebensauf' id='lebenslauf_viewer'/>
     </div>
   )
 }
