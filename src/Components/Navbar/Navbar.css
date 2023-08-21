@@ -81,6 +81,11 @@ header
   margin-right: 5vmin;
 }
 
+#profile:hover
+{
+  cursor: pointer;
+}
+
 img
 {
   height: 7vh;
@@ -104,11 +109,6 @@ li:hover
 {
   transform: scale(1.15);
   transition-duration: 0.5s;
-}
-
-.anti_hover
-{
-  pointer-events: none;
 }
 
 a

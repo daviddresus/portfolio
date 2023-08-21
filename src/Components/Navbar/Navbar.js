@@ -74,7 +74,7 @@ function Navbar() {
               <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/interessen'>Interessen</a></li>
               <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/portfolio'>Portfolio</a></li>
               {isLoggedIn ? (
-                <li id='profile' className='anti_hover'><img src='Images/profile.svg' alt='Profile Icon' id='profile_icon' style={{ height: isScrolled ? '4vh' : '7vh', transitionDuration: '0.5s'}} /></li>
+                <li id='profile'><img src='Images/profile.svg' alt='Profile Icon' id='profile_icon' style={{ height: isScrolled ? '4vh' : '7vh', transitionDuration: '0.5s'}} /></li>
               ) : (
                 <li id='profile'><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/login'>Einloggen</a></li>
               )}
