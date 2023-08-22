@@ -63,6 +63,8 @@
 
 .impressum_text
 {
+    display: block;
+    width: fit-content;
     font-size: 2vh;
 }
 
@@ -72,6 +74,7 @@
     #impressum_box
     {
         width: 80vw;
+        border: 2vw solid rgba(231, 238, 248, 0.3);
     }
 
     .impressum_title
@@ -101,6 +104,7 @@
     #impressum_box
     {
         width: 80vw;
+        border: 2vw solid rgba(231, 238, 248, 0.3);
     }
 
     .impressum_title

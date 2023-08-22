@@ -57,7 +57,7 @@
     #all_strength_boxes
     {
       grid-template-columns: auto auto;
-      gap: 15vw;
+      gap: 20vw;
       margin-top: 10%;
     }
 
@@ -89,7 +89,7 @@
     #all_strength_boxes
     {
       grid-template-columns: auto auto;
-      gap: 15vw;
+      gap: 20vw;
       margin-top: 10%;
     }
 

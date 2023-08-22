@@ -21,8 +21,8 @@ export default function Impressum() {
                 <p className='impressum_text'>3232 Ins</p>
 
                 <h2 className='impressum_subtitle'>Kontakt</h2>
-                <p className='impressum_text'>+41 79 870 44 46</p>
-                <p className='impressum_text'>E-Mail: davidrodriguesDRE@hotmail.com</p>
+                <a className='impressum_text' href="tel:+41798704446">+41 79 870 44 46</a>
+                <a className='impressum_text' href="mailto:davidrodriguesDRE@hotmail.com">E-Mail: davidrodriguesDRE@hotmail.com</a>
             </div>
         </div>
     )

@@ -14,26 +14,26 @@ export default function Portfolio() {
   }, []);
 
   const grades = [
-    { pdf_file: '', pdf_title: '', dropdown_title: 'bwd Noten' },
-    { pdf_file: '', pdf_title: '', dropdown_title: 'gibb Noten' },
-    { pdf_file: '', pdf_title: '', dropdown_title: 'üK Noten' },
-    { pdf_file: '', pdf_title: '', dropdown_title: 'Zertifikate' }
+    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=grades.php', dropdown_title: 'bwd Noten' },
+    { pdf_file: '', dropdown_title: 'gibb Noten' },
+    { pdf_file: '', dropdown_title: 'üK Noten' },
+    { pdf_file: '', dropdown_title: 'Zertifikate' }
   ]
 
   return (
     <div>
       <Title text="Portfolio" />
-      {isLoggedIn ? (
-        <iframe src="https://daviddre.com/portfolio_backend/portal.php?site=grades.php"></iframe>
-      ) : (
-        <p>Please log in to access the portfolio.</p>
-      )}
-
-      {grades.map((grade, index) => (
-        <div key={index}>
-          <Dropdown content={<Pdfviewer data={grade.pdf_file} title={grade.pdf_title} />} title={grade.dropdown_title} />
-        </div>
-      ))}
+      <div>
+        {grades.map((grade, index) => (
+          <div key={index}>
+            {isLoggedIn ? (
+              <Dropdown content={<iframe src={grade.pdf_file}></iframe>} title={grade.dropdown_title} />
+            ) : (
+              <p>Please log in to access the portfolio.</p>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
