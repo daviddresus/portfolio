@@ -34,8 +34,8 @@
 {
     .pdf_viewer
     {
-        height: 125vw;
-        width: 60vw;
+        height: 120vw;
+        width: 80vw;
     }
 
     .pdf_error_msg
@@ -50,7 +50,7 @@
     .pdf_viewer
     {
         height: 100vw;
-        width: 60vw;
+        width: 80vw;
     }
 
     .pdf_error_msg

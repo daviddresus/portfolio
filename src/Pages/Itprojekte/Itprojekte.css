@@ -150,7 +150,7 @@
 
     .vertical_line
     {
-        width: 70%;
+        width: 80%;
     }
 
     .project_box
@@ -161,7 +161,7 @@
         border: 2vw solid rgba(255, 255, 255, 0.3);
         /*makes it so that the border isn't on top of the div*/
         background-clip: padding-box;
-        width: 60vw;
+        width: 80vw;
         height: auto;
         margin-left: auto;
         margin-right: auto;
@@ -183,7 +183,7 @@
         border: 2vw solid rgba(255, 255, 255, 0.3);
         /*makes it so that the border isn't on top of the div*/
         background-clip: padding-box;
-        width: 60vw;
+        width: 80vw;
         height: auto;
         margin-left: auto;
         margin-right: auto;
@@ -204,14 +204,14 @@
 
     .project_image
     {
-        height: 60vw;
+        height: 80vw;
         margin-bottom: 5%;
     }
 
     .project_image:hover
     {
         cursor: zoom-in;
-        transform: scale(1.3);
+        transform: scale(1.2);
         transition-duration: 0.5s;
     }
 
@@ -231,7 +231,7 @@
     
     .vertical_line
     {
-        width: 70%;
+        width: 80%;
     }
 
     .project_box
@@ -242,7 +242,7 @@
         border: 2vw solid rgba(255, 255, 255, 0.3);
         /*makes it so that the border isn't on top of the div*/
         background-clip: padding-box;
-        width: 60vw;
+        width: 80vw;
         height: auto;
         margin-left: auto;
         margin-right: auto;
@@ -264,7 +264,7 @@
         border: 2vw solid rgba(255, 255, 255, 0.3);
         /*makes it so that the border isn't on top of the div*/
         background-clip: padding-box;
-        width: 60vw;
+        width: 80vw;
         height: auto;
         margin-left: auto;
         margin-right: auto;
@@ -285,14 +285,14 @@
 
     .project_image
     {
-        height: 60vw;
+        height: 80vw;
         margin-bottom: 5%;
     }
 
     .project_image:hover
     {
         cursor: zoom-in;
-        transform: scale(1.3);
+        transform: scale(1.2);
         transition-duration: 0.5s;
     }
 
