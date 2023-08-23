@@ -1,5 +1,37 @@
+#all_grades_box
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 15% 5% 15%;
+    gap: 7.5vw;
+}
+
 iframe
 {
     width: auto;
     border: none;
+}
+
+/*Smartphone*/
+@media screen and (max-width: 875px) and (orientation: portrait)
+{
+    #all_grades_box
+    {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0 10% 40% 10%;
+        gap: 15vw;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
+{
+    #all_grades_box
+    {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0 10% 40% 10%;
+        gap: 15vw;
+    }
 }

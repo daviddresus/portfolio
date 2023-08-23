@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 
 import Dropdown from '../../Components/DropDown/Dropdown.js';
 import isLoggedIn from '../../Components/Navbar/Navbar.js';
-import Pdfviewer from '../../Components/Abstract/Pdfviewer.js';
 
 export default function Portfolio() {
 
@@ -23,7 +22,7 @@ export default function Portfolio() {
   return (
     <div>
       <Title text="Portfolio" />
-      <div>
+      <div id='all_grades_box'>
         {grades.map((grade, index) => (
           <div key={index}>
             {isLoggedIn ? (
