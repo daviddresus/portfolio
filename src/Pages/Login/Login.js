@@ -11,15 +11,17 @@ export default function Login() {
 
   return (
     <div>
-        <Title text="Login"/>
-            <div id='login_form'>
-                <form method='POST' action='https://daviddre.com/portfolio_backend/login.php'>
-                    <input type='text' placeholder='Benutzername' name='username' id='username' required></input>
-                    <input type='password' placeholder='Passwort' name='password' id='password' required></input>
+      <body>
+        <Title text="Login" />
+        <div id='login_form'>
+          <form method='POST' action='https://daviddre.com/portfolio_backend/login.php'>
+            <input type='text' placeholder='Benutzername' name='username' id='username' required></input>
+            <input type='password' placeholder='Passwort' name='password' id='password' required></input>
 
-                    <button id='login_button' type='submit'>Einloggen</button>
-                </form>
-            </div>
+            <button id='login_button' type='submit'>Einloggen</button>
+          </form>
+        </div>
+      </body>
     </div>
   )
 }

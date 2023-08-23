@@ -21,23 +21,23 @@
   }
 }
 
+body
+{
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
 #footer
 {
   background: linear-gradient(to bottom,rgba(255, 255, 255, 0.3) 8%,rgb(255, 255, 255, 0.65) 8% 100%);
   display: flex;
   height: 15vh;
+  margin-top: auto;
   align-items: center;
   animation: slideInBottom ease-out 1.5s;
   animation-delay: 0;
 }
-
-  /* If User reaches the Error Page then the Footer is fixed to the bottom of the Page */
-  .error_page
-  {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
 
 @media screen and (orientation: landscape)
 {

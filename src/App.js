@@ -15,20 +15,22 @@ import { Route, Routes } from 'react-router-dom';
 export default function App() {
   return (
     <div>
-        <Navbar />
-            <main>
-                <Routes>
-                    <Route exact path='/' element={<Home />} />
-                    <Route exact path='/interessen' element={<Interessen />} />
-                    <Route exact path='/itprojekte' element={<Itprojekte />} />
-                    <Route exact path='/lebenslauf' element={<Lebenslauf />} />
-                    <Route exact path='/portfolio' element={<Portfolio />} />
-                    <Route exact path='/login' element={<Login />} />
-                    <Route exact path='/staerken' element={<Staerken />} />
-                    <Route exact path="/*" element={<Error404 />} />
-                </Routes>
-            </main>
-        <Footer />
+      <Navbar />
+      <main>
+        <body>
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/interessen' element={<Interessen />} />
+            <Route exact path='/itprojekte' element={<Itprojekte />} />
+            <Route exact path='/lebenslauf' element={<Lebenslauf />} />
+            <Route exact path='/portfolio' element={<Portfolio />} />
+            <Route exact path='/login' element={<Login />} />
+            <Route exact path='/staerken' element={<Staerken />} />
+            <Route exact path="/*" element={<Error404 />} />
+          </Routes>
+        </body>
+      </main>
+      <Footer />
     </div>
   )
 }

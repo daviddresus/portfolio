@@ -1,21 +1,29 @@
 #all_grades_box
 {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#grades_grid
+{
     display: grid;
     grid-template-columns: auto auto;
     gap: 7.5vw;
     margin-bottom: 5%;
+    width: auto;
 }
 
 iframe
 {
-    width: auto;
+    width: 100%;
     border: none;
 }
 
 /*Smartphone*/
 @media screen and (max-width: 875px) and (orientation: portrait)
 {
-    #all_grades_box
+    #grades_grid
     {
         display: flex;
         flex-direction: column;
@@ -26,7 +34,7 @@ iframe
 /*Tablet*/
 @media screen and (min-width: 875px) and (max-width: 1023px) and (orientation: portrait)
 {
-    #all_grades_box
+    #grades_grid
     {
         display: flex;
         flex-direction: column;
