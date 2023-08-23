@@ -2,8 +2,8 @@
 {
     display: grid;
     grid-template-columns: auto auto;
-    margin: 0 15% 5% 15%;
     gap: 7.5vw;
+    margin-bottom: 5%;
 }
 
 iframe
@@ -17,9 +17,8 @@ iframe
 {
     #all_grades_box
     {
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0 10% 40% 10%;
+        display: flex;
+        flex-direction: column;
         gap: 15vw;
     }
 }
@@ -29,9 +28,8 @@ iframe
 {
     #all_grades_box
     {
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0 10% 40% 10%;
+        display: flex;
+        flex-direction: column;
         gap: 15vw;
     }
 }

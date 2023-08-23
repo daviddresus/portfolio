@@ -26,7 +26,9 @@ export default function Portfolio() {
         {grades.map((grade, index) => (
           <div key={index}>
             {isLoggedIn ? (
-              <Dropdown content={<iframe src={grade.pdf_file}></iframe>} title={grade.dropdown_title} />
+              <div>
+                <Dropdown content={<iframe src={grade.pdf_file}></iframe>} title={grade.dropdown_title} />
+              </div>
             ) : (
               <p>Please log in to access the portfolio.</p>
             )}
