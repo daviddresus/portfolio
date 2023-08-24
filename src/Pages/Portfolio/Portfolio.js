@@ -14,9 +14,9 @@ export default function Portfolio() {
 
   const grades = [
     { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=bwdnoten.php', dropdown_title: 'bwd Noten' },
-    { pdf_file: '', dropdown_title: 'gibb Noten' },
-    { pdf_file: '', dropdown_title: 'üK Noten' },
-    { pdf_file: '', dropdown_title: 'Zertifikate' }
+    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=gibbnoten.php', dropdown_title: 'gibb Noten' },
+    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=uknoten.php', dropdown_title: 'üK Noten' },
+    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=zertifikate.php', dropdown_title: 'Zertifikate' }
   ]
 
   return (

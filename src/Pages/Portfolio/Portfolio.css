@@ -16,7 +16,8 @@
 
 iframe
 {
-    width: 100%;
+    flex-grow: 1;
+    height: 45vw;
     border: none;
 }
 
@@ -29,6 +30,11 @@ iframe
         flex-direction: column;
         gap: 15vw;
     }
+
+    iframe
+    {
+        height: 120vw;
+    }
 }
 
 /*Tablet*/
@@ -39,5 +45,10 @@ iframe
         display: flex;
         flex-direction: column;
         gap: 15vw;
+    }
+
+    iframe
+    {
+        height: 100vw;
     }
 }
