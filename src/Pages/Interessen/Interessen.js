@@ -15,9 +15,9 @@ export default function Interessen() {
   ];
 
   const contextToTheItem = [
-    { text: 'First Placeholder', alt: 'Image', src: 'Images/the_last_chance.png', id: '1' },
-    { text: 'Second Placeholder', alt: 'Image', src: 'Images/logo.svg', id: '2' },
-    { text: 'Third Placeholder', alt: 'Image', src: 'Images/meine_erste_website.png', id: '3' }
+    { text: 'Seit dem ich mich bekannt gemacht habe mit HTML, CSS und JavaScript, war ich begeistert, weiterhin Designs zu entwickeln und diese in echten Websiten umzuwandeln. Dies erkennt man am besten, wenn man bei meiner It-Projekte Seite zuerst "meine erste Website" anschaut, danach "meine erste Bewerbungswebsite" und zuletzt diese Website :)', alt: 'Frontend', src: 'Images/frontend.png', id: '1' },
+    { text: 'Ich habe schon recht viele Games angefangen zu entwickeln. Jedoch schaffte ich bis jetzt nur einen richtigen Spiel fertigzustellen. Alle andere Videospiele habe ich nur angefangen. Dieses Spiel, welches auf dem Bild ersichtlich ist, ist eines der Spiele, der am weitesten entwickelt wurde in meiner Freizeit. Es ist ein Tower Defense Game, bei welcher noch vieles fehlt.', alt: 'Game Development', src: 'Images/game_development.png', id: '2' },
+    { text: 'Schon vor der Informatiker Ausbildung editierte ich Videos von mir am spielen oder sonstige Videos über mich. Ich finde es recht spannend, wie viel man mit einem Videoeditor machen kann. Die Effekte, Transitionen und viele weitere andere Sachen.', alt: 'Video Editing', src: 'Images/video_editing.png', id: '3' }
   ]
 
   const getCssVariableValue = (variableName) => {
