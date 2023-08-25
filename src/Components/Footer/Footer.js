@@ -15,8 +15,8 @@ function Footer() {
             <footer id='footer'>
                 <div className='left_footer_side'>
                     <div className='external_links'>
-                        <a href=''><img src='Images/linkedin.svg' /></a>
-                        <a href=''><img src='Images/github.svg' /></a>
+                        <a href='https://www.linkedin.com/in/david-esteves-rodrigues-881492239/' target='blank'><img src='Images/linkedin.svg' /></a>
+                        <a href='https://github.com/daviddresus' target='blank'><img src='Images/github.svg' /></a>
                     </div>
                     <div id='copyright'>
                         <p><span>Copyright © 2023 </span><span>David Esteves Rodrigues</span></p>
