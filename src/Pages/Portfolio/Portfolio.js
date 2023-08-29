@@ -22,23 +22,29 @@ export default function Portfolio() {
   return (
     <div>
       <body>
-      <Title text="Portfolio" />
-      <div id='all_grades_box'>
-        <div id='grades_grid'>
-          {grades.map((grade, index) => (
-            <div key={index}>
-              {isLoggedIn ? (
-                <div>
-                  <Dropdown content={<iframe src={grade.pdf_file}></iframe>} title={grade.dropdown_title} />
-                </div>
-              ) : (
-                <p>Please log in to access the portfolio.</p>
-              )}
+        {isLoggedIn ? (
+          <div>
+            <Title text="Portfolio" />
+            <div id='all_grades_box'>
+              <div id='grades_grid'>
+                {grades.map((grade, index) => (
+                  <div key={index}>
+                    <Dropdown content={<iframe src={grade.pdf_file}></iframe>} title={grade.dropdown_title} />
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        ) : (
+          <div>
+            <div id="error_box">
+              <h1>403</h1>
+              <h2>Unauthorized</h2>
+              <h3>Zugriff verweigert. Logen Sie sich zuerst ein</h3>
+            </div>
+          </div>
+        )}
       </body>
-    </div>
+    </div >
   )
 }
