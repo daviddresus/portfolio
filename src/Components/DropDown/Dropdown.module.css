@@ -15,7 +15,34 @@
 
 .download_button
 {
-    
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.45);
+    transform: translateX(100%);
+    height: 100%;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.download_button img
+{
+    display: flex;
+    height: 5vh;
+}
+
+.dropdown
+{
+    pointer-events: none;
+}
+
+.dropdown_button,
+.dropdown_button h2,
+.dropdown_button img
+{
+    pointer-events: auto;
 }
 
 .dropdown_box
@@ -27,6 +54,7 @@
 
 .dropdown
 {
+    position: relative;
     display: flex;
     color: #6882FF;
     font-weight: 1000;
@@ -82,6 +110,20 @@
     width: auto;
     max-height: 0;
     transition: max-height 1s ease-in-out;
+}
+
+.showDownload
+{
+    opacity: 1;
+    width: 3.5vw;
+    transition: 0.5s ease-in-out;
+}
+
+.hideDownload
+{
+    opacity: 0;
+    width: 0vw;
+    transition: 0.5s ease-in-out;
 }
 
 /*Smartphone*/

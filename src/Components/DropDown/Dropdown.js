@@ -26,9 +26,11 @@ export default function Dropdown({ content, title }) {
                 <div className={styles.dropdown_button}>
                     <h2>{title}</h2><img src='Images/dropdown.svg' alt='Dropdown Icon' id={styles.dropdown_icon} style={svgStyle} />
                 </div>
-            </div>
-            <div className={styles.download_button}>
-                <p>text</p>
+                <div className={`${styles.download_button} ${open ? styles.showDownload : styles.hideDownload}`}>
+                    <a>
+                        <img src='Images/download.svg' alt='download' />
+                    </a>
+                </div>
             </div>
             <div className={`${styles.content} ${open ? styles.contentOpen : styles.contentClosed}`}>
                 {content}

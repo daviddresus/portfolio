@@ -13,6 +13,7 @@ import Error404 from './Pages/Error404/Error404.js';
 import { Route, Routes } from 'react-router-dom';
 
 export default function App() {
+
   return (
     <div>
       <Navbar />

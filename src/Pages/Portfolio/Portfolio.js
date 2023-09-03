@@ -1,10 +1,9 @@
 import './Portfolio.css';
 import Title from '../../Components/Title/Title.js';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import Dropdown from '../../Components/DropDown/Dropdown.js';
-import isLoggedIn from '../../Components/Navbar/Navbar.js';
 
 export default function Portfolio() {
 
@@ -18,6 +17,27 @@ export default function Portfolio() {
     { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=uknoten.php', dropdown_title: 'üK Noten' },
     { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=zertifikate.php', dropdown_title: 'Zertifikate' }
   ]
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    async function checkSessionStatus() {
+      try {
+        const response = await fetch('/portfolio_backend/profile.php', {
+          method: 'GET',
+          credentials: 'include' // This is important for sending cookies
+        });
+
+        if (response.ok) {
+          setIsLoggedIn(true);
+        }
+      } catch (error) {
+        console.error('Error checking session:', error);
+      }
+    }
+
+    checkSessionStatus();
+  }, []);
 
   return (
     <div>
