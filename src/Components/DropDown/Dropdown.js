@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../../Components/DropDown/Dropdown.module.css';
 
-export default function Dropdown({ content, title }) {
+export default function Dropdown({ content, title, fileLoc, fileName }) {
     const [canRun, setCanRun] = useState(true)
     const [open, setOpen] = useState(false)
     const [svgStyle, setStyle] = useState({ rotate: '0deg' })
@@ -27,7 +27,7 @@ export default function Dropdown({ content, title }) {
                     <h2>{title}</h2><img src='Images/dropdown.svg' alt='Dropdown Icon' id={styles.dropdown_icon} style={svgStyle} />
                 </div>
                 <div className={`${styles.download_button} ${open ? styles.showDownload : styles.hideDownload}`}>
-                    <a>
+                    <a href={fileLoc} download={fileName}>
                         <img src='Images/download.svg' alt='download' />
                     </a>
                 </div>

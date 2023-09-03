@@ -120,6 +120,7 @@
     transition-duration: 0.5s;
     margin-top: auto;
     margin-bottom: auto;
+    z-index: 4;
 }
 
 .project_image:hover

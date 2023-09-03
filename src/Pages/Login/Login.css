@@ -27,6 +27,16 @@ input:-webkit-autofill:active{
     -webkit-text-fill-color: #6882ff;
 }
 
+.login_error
+{
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 0, 0, 0.75);
+    font-size: 2vh;
+    font-weight: 1000;
+    margin-bottom: 1%;
+}
+
 form
 {
     display: flex;
@@ -129,6 +139,15 @@ input:focus
         font-size: 2vh;
         padding: 3%;
     }
+
+    .login_error
+    {
+        text-align: center;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
+    }
 }
 
 /*Tablet*/
@@ -182,5 +201,14 @@ input:focus
     {
         font-size: 2vh;
         padding: 3%;
+    }
+
+    .login_error
+    {
+        text-align: center;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
     }
 }

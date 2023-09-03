@@ -13,12 +13,12 @@ export default function Itprojekte() {
   }, []);
 
   const projects = [
-    { title: 'Meine erste Website', text: 'Meine erste Website habe ich im Praxistraining der gibb angefangen. Für diese Website wurde nur HTML 5 und CSS angewendet. Diese Website sollte mich vorstellen können.', img: '/Images/meine_erste_website.png', pdf_file: 'Files/Erste_Website.pdf', pdf_title: 'The Last Chance', id: '1' },
-    { title: 'The Last Chance', text: 'The Last Chance ist ein Shooter Spiel, welches mit Javascript Programmiert wurde. In diesem Spiel muss der Spieler gegen einer unendlichen Anzahl an Zombies kämpfen.', img: 'Images/the_last_chance.png', pdf_file: 'Files/The_Last_Chance.pdf', id: '2' },
-    { title: 'Meine erste Bewerbungswebsite', text: 'In einer der Module bei der gibb konnten wir eine Website erstellen mit allen Frameworks, die wir wollten. Damals blieb ich mit dem Standard HTML, CSS und JavaScript. Für das Thema durfte man frei auswählen und deshalb entschied ich mir, meine erste Bewerbungswebsite zu erstellen.', img: 'Images/erste_bewerbungswebsite.png', pdf_file: 'Files/Erste_Bewerbungswebsite.pdf', id: '3' },
-    { title: 'Discord Bot', text: 'Dies war ein Projekt, welches ich in einer Gruppe von drei Leute entwickelt habe. Dieser Bot kann auf Discord benutzt werden (eine Social Platform) und ist dafür verantwortlich, bilder von Google zu suchen ohne dafür einen Browser öffnen zu müssen.', img: 'Images/searchify.png', pdf_file: 'Files/Discord_Bot.pdf', id: '4' },
-    { title: 'Maui App', text: 'Bei diesem Projekt war .Net Maui vor etwa 6 Monaten herausgekommen. Es war ein spannender Thema, bei welcher wir eine Desktop-Applikation entwickeln durften, indem wir C# und XAML benutzt haben. Für diese App war die Themenauswahl auch frei, welhalb ich mich für gibb Support entschied.', img: 'Images/maui_app.png', pdf_file: 'Files/Maui_App.pdf', id: '5' },
-    { title: 'Android App', text: 'In einer Zweiergruppe wurde diese Android App während einem üK zusammengestellt. Java und XAML sind die Sprachen, die verwendet wurden, um solches Resultat zu erreichen. Bei dieser App kann man das Astronomiebild des Tages sehen sowie weitere Infos über alle.', img: 'Images/solar_search.png', pdf_file: 'Files/Android_App.pdf', id: '6' }
+    { title: 'Meine erste Website', text: 'Meine erste Website habe ich im Praxistraining der gibb angefangen. Für diese Website wurde nur HTML 5 und CSS angewendet. Diese Website sollte mich vorstellen können.', img: '/Images/meine_erste_website.png', pdf_file: 'Files/Erste_Website.pdf', file_name: 'Erste_Website', pdf_title: 'Erste Website', id: '1' },
+    { title: 'The Last Chance', text: 'The Last Chance ist ein Shooter Spiel, welches mit Javascript Programmiert wurde. In diesem Spiel muss der Spieler gegen einer unendlichen Anzahl an Zombies kämpfen.', img: 'Images/the_last_chance.png', pdf_file: 'Files/The_Last_Chance.pdf', file_name: 'The_Last_Chance', pdf_title: 'The Last Chance', id: '2' },
+    { title: 'Meine erste Bewerbungswebsite', text: 'In einer der Module bei der gibb konnten wir eine Website erstellen mit allen Frameworks, die wir wollten. Damals blieb ich mit dem Standard HTML, CSS und JavaScript. Für das Thema durfte man frei auswählen und deshalb entschied ich mir, meine erste Bewerbungswebsite zu erstellen.', img: 'Images/erste_bewerbungswebsite.png', pdf_file: 'Files/Erste_Bewerbungswebsite.pdf', file_name: 'Erste_Bewerbungswebsite', pdf_title: 'Erste Bewerbungswebsite', id: '3' },
+    { title: 'Discord Bot', text: 'Dies war ein Projekt, welches ich in einer Gruppe von drei Leute entwickelt habe. Dieser Bot kann auf Discord benutzt werden (eine Social Platform) und ist dafür verantwortlich, bilder von Google zu suchen ohne dafür einen Browser öffnen zu müssen.', img: 'Images/searchify.png', pdf_file: 'Files/Discord_Bot.pdf', file_name: 'Discord_Bot', pdf_title: 'Searchify', id: '4' },
+    { title: 'Maui App', text: 'Bei diesem Projekt war .Net Maui vor etwa 6 Monaten herausgekommen. Es war ein spannender Thema, bei welcher wir eine Desktop-Applikation entwickeln durften, indem wir C# und XAML benutzt haben. Für diese App war die Themenauswahl auch frei, welhalb ich mich für gibb Support entschied.', img: 'Images/maui_app.png', pdf_file: 'Files/Maui_App.pdf', file_name: 'Maui_App', pdf_title: 'Maui App', id: '5' },
+    { title: 'Android App', text: 'In einer Zweiergruppe wurde diese Android App während einem üK zusammengestellt. Java und XAML sind die Sprachen, die verwendet wurden, um solches Resultat zu erreichen. Bei dieser App kann man das Astronomiebild des Tages sehen sowie weitere Infos über alle.', img: 'Images/solar_search.png', pdf_file: 'Files/Android_App.pdf', file_name: 'Android_App', pdf_title: 'Solar Search', id: '6' }
   ];
 
   const evenOrOddClasses = (id) => {
@@ -44,7 +44,7 @@ export default function Itprojekte() {
 
                 <img className='project_image' src={project.img} alt='Bild vom Projekt'></img>
               </div>
-              <Dropdown content={<Pdfviewer data={project.pdf_file} title={project.pdf_title} />} title={'Abstract'} />
+              <Dropdown content={<Pdfviewer data={project.pdf_file} title={project.pdf_title} />} title={'Abstract'} fileLoc={project.pdf_file} fileName={project.file_name} />
             </div>
           </div>
         ))}

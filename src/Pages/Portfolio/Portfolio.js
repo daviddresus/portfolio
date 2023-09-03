@@ -12,10 +12,10 @@ export default function Portfolio() {
   }, []);
 
   const grades = [
-    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=bwdnoten.php', dropdown_title: 'bwd Noten' },
-    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=gibbnoten.php', dropdown_title: 'gibb Noten' },
-    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=uknoten.php', dropdown_title: 'üK Noten' },
-    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=zertifikate.php', dropdown_title: 'Zertifikate' }
+    { object_file: 'https://daviddre.com/portfolio_backend/portal.php?site=bwdnoten.php', pdf_file: 'https://daviddre.com/portfolio_backend/file.php?path=/bwd.pdf', file_name: 'bwd', dropdown_title: 'bwd Noten' },
+    { object_file: 'https://daviddre.com/portfolio_backend/portal.php?site=gibbnoten.php', pdf_file: 'https://daviddre.com/portfolio_backend/file.php?path=/gibb.pdf', file_name: 'gibb', dropdown_title: 'gibb Noten' },
+    { object_file: 'https://daviddre.com/portfolio_backend/portal.php?site=uknoten.php', pdf_file: 'https://daviddre.com/portfolio_backend/file.php?path=/uk.pdf', file_name: 'uk', dropdown_title: 'üK Noten' },
+    { object_file: 'https://daviddre.com/portfolio_backend/portal.php?site=zertifikate.php', pdf_file: 'https://daviddre.com/portfolio_backend/file.php?path=/zertifikate.pdf', file_name: 'zertifikate', dropdown_title: 'Zertifikate' }
   ]
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -49,7 +49,7 @@ export default function Portfolio() {
               <div id='grades_grid'>
                 {grades.map((grade, index) => (
                   <div key={index}>
-                    <Dropdown content={<iframe src={grade.pdf_file}></iframe>} title={grade.dropdown_title} />
+                    <Dropdown content={<iframe src={grade.object_file}></iframe>} title={grade.dropdown_title} fileLoc={grade.pdf_file} fileName={grade.file_name}/>
                   </div>
                 ))}
               </div>
