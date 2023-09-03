@@ -50,6 +50,16 @@ function Navbar() {
     };
   }, []);
 
+  const showLogout = () => {
+    const logoutButton = document.getElementById('logout');
+    logoutButton.style = 'opacity: 1; transition-duration: 0.5s';
+  };
+  
+  const hideLogout = () => {
+    const logoutButton = document.getElementById('logout');
+    logoutButton.style = 'opacity: 0; transition-duration: 0.5s';
+  };
+
   return (
     <div>
       {/* Will make sure that the margin set between the nav and the Element below remains intact */}
@@ -58,23 +68,26 @@ function Navbar() {
         <div id='navbar'>
           <nav>
             <ul style={{ height: isScrolled ? '7.5vh' : '15vh', transitionDuration: '0.5s' }} id='navbar_content_holder'>
-              <li id='hamburger' onClick={openSideMenu}>
+              <li id='hamburger' className='hoverable' onClick={openSideMenu}>
                 <img src='Images/menu.svg' alt='Hamburger Icon' id='hamburger_icon' style={{ height: isScrolled ? '4vh' : '6vh', transitionDuration: '0.5s' }} />
               </li>
-              <li>
+              <li className='hoverable'>
                 <a href='/'>
                   <img src='Images/logo.svg' alt='Logo' id='logo' style={{ height: isScrolled ? '4vh' : '7vh', transitionDuration: '0.5s' }} />
                 </a>
               </li>
-              <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/lebenslauf'>Lebenslauf</a></li>
-              <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/staerken'>Stärken</a></li>
-              <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/itprojekte'>IT-Projekte</a></li>
-              <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/interessen'>Interessen</a></li>
-              <li><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/portfolio'>Portfolio</a></li>
+              <li className='hoverable'><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/lebenslauf'>Lebenslauf</a></li>
+              <li className='hoverable'><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/staerken'>Stärken</a></li>
+              <li className='hoverable'><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/itprojekte'>IT-Projekte</a></li>
+              <li className='hoverable'><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/interessen'>Interessen</a></li>
+              <li className='hoverable'><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/portfolio'>Portfolio</a></li>
               {isLoggedIn ? (
-                <li id='profile'><img src='Images/profile.svg' alt='Profile Icon' id='profile_icon' style={{ height: isScrolled ? '4vh' : '7vh', transitionDuration: '0.5s'}} /></li>
+                <div id='profile'>
+                  <li><img src='Images/profile.svg' alt='Profile Icon' id='profile_icon' onMouseEnter={showLogout} onMouseLeave={hideLogout} style={{ height: isScrolled ? '4vh' : '7vh', transitionDuration: '0.5s' }} /></li>
+                  <div id='logout' onMouseEnter={showLogout} onMouseLeave={hideLogout}><a href='https://daviddre.com/portfolio_backend/logout.php' id='logout_button'>Ausloggen</a></div>
+                </div>
               ) : (
-                <li id='profile'><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/login'>Einloggen</a></li>
+                <li id='profile' className='hoverable'><a style={{ fontSize: isScrolled ? '1.5vh' : '2.5vh', transitionDuration: '0.5s' }} href='/login'>Einloggen</a></li>
               )}
             </ul>
           </nav>

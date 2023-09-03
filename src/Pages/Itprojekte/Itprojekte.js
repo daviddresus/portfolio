@@ -30,6 +30,9 @@ export default function Itprojekte() {
   return (
     <div>
       <Title text="IT-Projekte" />
+      <div className='download_all_files'>
+        <a href='Files/Abstracts.zip' download='Abstracts'><span>Alle Abstracts</span> Herunterladen</a>
+      </div>
       <div id='all_project_boxes'>
         {projects.map((project, index) => (
           <div key={index}>

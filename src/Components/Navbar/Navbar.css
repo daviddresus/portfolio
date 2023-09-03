@@ -48,6 +48,39 @@ body
   }
 }
 
+#logout
+{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 100%;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 10vw;
+  height: 3vw;
+  opacity: 0;
+}
+
+#logout a
+{
+  transition-duration: 0.5s;
+}
+
+#logout_button
+{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#logout_button:hover
+{
+  transform: scale(1.15);
+  transition-duration: 0.5s;
+}
+
 .invisible_box
 {
   display: block;
@@ -77,11 +110,15 @@ header
 
 #profile
 {
+  display: flex;
+  position: relative;
   margin-left: auto;
   margin-right: 5vmin;
+  flex-direction: column;
+  align-items: end;
 }
 
-#profile:hover
+#profile_icon
 {
   cursor: pointer;
 }
@@ -105,7 +142,7 @@ li
   transition-duration: 0.5s;
 }
 
-li:hover
+li.hoverable:hover
 {
   transform: scale(1.15);
   transition-duration: 0.5s;
@@ -172,6 +209,17 @@ a
   {
     cursor: pointer;
   }
+
+  #logout
+  {
+    width: 30vw;
+    height: 9vw;
+  }
+
+  #profile li
+  {
+    display: flex !important;
+  }
 }
 
 /*Tablet*/
@@ -225,5 +273,16 @@ a
   #hamburger:hover, #close_button:hover
   {
     cursor: pointer;
+  }
+
+  #logout
+  {
+    width: 30vw;
+    height: 9vw;
+  }
+
+  #profile li
+  {
+    display: flex !important;
   }
 }

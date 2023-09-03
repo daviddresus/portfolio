@@ -45,11 +45,14 @@ export default function Portfolio() {
         {isLoggedIn ? (
           <div>
             <Title text="Portfolio" />
+            <div className='download_all_files'>
+              <a href='https://daviddre.com/portfolio_backend/file.php?path=/Grades.zip' download='Grades'><span>Alle Zeugnise / Zertifikate</span> Herunterladen</a>
+            </div>
             <div id='all_grades_box'>
               <div id='grades_grid'>
                 {grades.map((grade, index) => (
                   <div key={index}>
-                    <Dropdown content={<iframe src={grade.object_file}></iframe>} title={grade.dropdown_title} fileLoc={grade.pdf_file} fileName={grade.file_name}/>
+                    <Dropdown content={<iframe src={grade.object_file}></iframe>} title={grade.dropdown_title} fileLoc={grade.pdf_file} fileName={grade.file_name} />
                   </div>
                 ))}
               </div>

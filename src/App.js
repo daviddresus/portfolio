@@ -17,8 +17,8 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <main>
-        <body>
+      <body>
+        <main>
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/interessen' element={<Interessen />} />
@@ -29,8 +29,8 @@ export default function App() {
             <Route exact path='/staerken' element={<Staerken />} />
             <Route exact path="/*" element={<Error404 />} />
           </Routes>
-        </body>
-      </main>
+        </main>
+      </body>
       <Footer />
     </div>
   )
