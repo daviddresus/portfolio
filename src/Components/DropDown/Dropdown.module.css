@@ -15,10 +15,6 @@
 
 .download_button
 {
-<<<<<<< HEAD
-    background-color: green;
-    z-index: 1;
-=======
     position: absolute;
     display: flex;
     justify-content: center;
@@ -56,7 +52,6 @@
 .download_button img
 {
     pointer-events: auto;
->>>>>>> e25dee126aa62cf12fd1c45be35b4d4f8e794373
 }
 
 .dropdown_box
