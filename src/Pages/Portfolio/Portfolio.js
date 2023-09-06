@@ -1,10 +1,9 @@
 import './Portfolio.css';
 import Title from '../../Components/Title/Title.js';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import Dropdown from '../../Components/DropDown/Dropdown.js';
-import isLoggedIn from '../../Components/Navbar/Navbar.js';
 
 export default function Portfolio() {
 
@@ -13,11 +12,32 @@ export default function Portfolio() {
   }, []);
 
   const grades = [
-    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=bwdnoten.php', dropdown_title: 'bwd Noten' },
-    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=gibbnoten.php', dropdown_title: 'gibb Noten' },
-    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=uknoten.php', dropdown_title: 'üK Noten' },
-    { pdf_file: 'https://daviddre.com/portfolio_backend/portal.php?site=zertifikate.php', dropdown_title: 'Zertifikate' }
+    { object_file: 'https://daviddre.com/portfolio_backend/portal.php?site=bwdnoten.php', pdf_file: 'https://daviddre.com/portfolio_backend/file.php?path=/bwd.pdf', file_name: 'bwd', dropdown_title: 'bwd Noten' },
+    { object_file: 'https://daviddre.com/portfolio_backend/portal.php?site=gibbnoten.php', pdf_file: 'https://daviddre.com/portfolio_backend/file.php?path=/gibb.pdf', file_name: 'gibb', dropdown_title: 'gibb Noten' },
+    { object_file: 'https://daviddre.com/portfolio_backend/portal.php?site=uknoten.php', pdf_file: 'https://daviddre.com/portfolio_backend/file.php?path=/uk.pdf', file_name: 'uk', dropdown_title: 'üK Noten' },
+    { object_file: 'https://daviddre.com/portfolio_backend/portal.php?site=zertifikate.php', pdf_file: 'https://daviddre.com/portfolio_backend/file.php?path=/zertifikate.pdf', file_name: 'zertifikate', dropdown_title: 'Zertifikate' }
   ]
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    async function checkSessionStatus() {
+      try {
+        const response = await fetch('/portfolio_backend/profile.php', {
+          method: 'GET',
+          credentials: 'include' // This is important for sending cookies
+        });
+
+        if (response.ok) {
+          setIsLoggedIn(true);
+        }
+      } catch (error) {
+        console.error('Error checking session:', error);
+      }
+    }
+
+    checkSessionStatus();
+  }, []);
 
   return (
     <div>
@@ -25,11 +45,14 @@ export default function Portfolio() {
         {isLoggedIn ? (
           <div>
             <Title text="Portfolio" />
+            <div className='download_all_files'>
+              <a href='https://daviddre.com/portfolio_backend/file.php?path=/Grades.zip' download='Grades'><span>Alle Zeugnise / Zertifikate</span> Herunterladen</a>
+            </div>
             <div id='all_grades_box'>
               <div id='grades_grid'>
                 {grades.map((grade, index) => (
                   <div key={index}>
-                    <Dropdown content={<iframe src={grade.pdf_file}></iframe>} title={grade.dropdown_title} />
+                    <Dropdown content={<iframe src={grade.object_file}></iframe>} title={grade.dropdown_title} fileLoc={grade.pdf_file} fileName={grade.file_name} />
                   </div>
                 ))}
               </div>

@@ -15,8 +15,48 @@
 
 .download_button
 {
+<<<<<<< HEAD
     background-color: green;
     z-index: 1;
+=======
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.45);
+    transform: translateX(100%);
+    height: 100%;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.download_button img
+{
+    display: flex;
+    height: 5vh;
+    transition-duration: 0.5s;
+}
+
+.download_button img:hover
+{
+    transform: scale(1.15);
+    transition-duration: 0.5s;
+}
+
+.dropdown
+{
+    pointer-events: none;
+}
+
+.dropdown_button,
+.dropdown_button h2,
+.dropdown_button img,
+.download_button img
+{
+    pointer-events: auto;
+>>>>>>> e25dee126aa62cf12fd1c45be35b4d4f8e794373
 }
 
 .dropdown_box
@@ -24,10 +64,12 @@
     width: auto;
     animation: scaleUp ease-out 1.5s;
     animation-delay: 0;
+    z-index: 1;
 }
 
 .dropdown
 {
+    position: relative;
     display: flex;
     color: #6882FF;
     font-weight: 1000;
@@ -48,6 +90,7 @@
     width: 100%;
     padding: 1.5%;
     transition-duration: 0.5s;
+    z-index: 2;
 }
 
 .dropdown_button:hover
@@ -85,6 +128,20 @@
     transition: max-height 1s ease-in-out;
 }
 
+.showDownload
+{
+    opacity: 1;
+    width: 3.5vw;
+    transition: 0.5s ease-in-out;
+}
+
+.hideDownload
+{
+    opacity: 0;
+    width: 0vw;
+    transition: 0.5s ease-in-out;
+}
+
 /*Smartphone*/
 @media screen and (max-width: 875px) and (orientation: portrait)
 {
@@ -98,6 +155,16 @@
         width: auto;
         max-height: 150vw;
         transition: max-height 1s ease-in-out;
+    }
+
+    .download_button
+    {
+        transform: translateX(0%);
+    }
+
+    .showDownload
+    {
+        width: 12vw;
     }
 }
 
@@ -114,5 +181,15 @@
         width: auto;
         max-height: 130vw;
         transition: max-height 1s ease-in-out;
+    }
+
+    .download_button
+    {
+        transform: translateX(0%);
+    }
+
+    .showDownload
+    {
+        width: 10vw;
     }
 }
